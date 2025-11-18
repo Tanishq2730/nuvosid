@@ -1,0 +1,22 @@
+[
+  {
+    "id": "arch",
+    "title": "Architecture",
+    "description": "Concept to delivery: masterplanning, building design, and interiors.",
+    "imgSrc":"/assets/service1.png"
+  },
+  {
+    "id": "eng",
+    "title": "Engineering",
+    "description": "Structural, MEP and sustainability engineering for performance and safety.",
+    "imgSrc":"/assets/service2.png"
+  },
+  {
+    "id": "cm",
+    "title": "Construction Management",
+    "description": "Cost control, scheduling, and site coordination for predictable outcomes.",
+    "imgSrc":"/assets/service3.png"
+  }
+]
+
+

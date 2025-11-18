@@ -1,0 +1,38 @@
+.form {
+  display: grid;
+  gap: 16px;
+  max-width: 720px;
+}
+
+.row {
+  display: grid;
+  gap: 8px;
+}
+
+.form label {
+  color: var(--text-secondary);
+}
+
+.form input,
+.form textarea {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.submit {
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: 1px solid transparent;
+}
+
+.status {
+  color: var(--text-secondary);
+}
+
+
