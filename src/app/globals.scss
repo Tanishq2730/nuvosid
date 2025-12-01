@@ -1,0 +1,424 @@
+/* Global Dark Theme Styles + Bootstrap */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "bootstrap/scss/bootstrap";
+
+:root {
+  /* Custom theme variables */
+  --bg-primary: #0b0b0b;
+  --bg-elevated: #12161f;
+  --text-primary: #e6e8eb;
+  --text-secondary: #b2b9c3;
+  --accent-custom: #6cc0ff;
+  --accent-contrast: #0b0e13;
+  --border-custom: #202633;
+  
+  /* Tailwind CSS variables for shadcn/ui */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--accent-custom);
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-custom);
+}
+
+/* Use Bootstrap's .container instead of a custom one to avoid conflicts */
+
+.section {
+  padding: 64px 0;
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-custom);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.visuallyHidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
+/* Layout regions */
+// header, footer {
+//   background: var(--bg-elevated);
+//   border-bottom: 1px solid var(--border);
+// }
+
+footer {
+  border-top: 1px solid var(--border-custom);
+}
+
+
+// .heroHeading{
+//   h2{
+//     font-size: 22em;
+//   }
+// }\.mainSection
+
+.mainSection{
+  padding: 5em 0;
+  position: relative;
+}
+
+.scrollHead{
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 50px;
+}
+
+.mainSection p{
+  // text-align: center;
+  // padding: 0 6em;
+}
+.aboutContent p{
+  text-align: center;
+  padding: 0 6em;
+}
+.sectionHeading{
+  margin-bottom: 8em;
+  text-align: center;
+}
+
+.knowBtn{
+background-color: #fff;
+color: #000;
+margin-top: 2em;
+border-radius: 20px;
+}
+
+.scrollLogo {
+  width: 15% !important;
+  margin: auto;
+}
+
+.clientLogo {
+  // margin: 50px 0 0;
+  width: 100%;
+  height: 16em;
+  background: url(../../public/assets/clients.png) repeat-x;
+  position: relative;
+  background-size: cover;
+  animation-name: scrolling-images;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-play-state: running;
+  -moz-animation-name: scrolling-images;
+  -moz-animation-duration: 40s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-play-state: running;
+  -webkit-animation-name: scrolling-images;
+  -webkit-animation-duration: 40s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-play-state: running;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 26.5%, rgb(0, 0, 0) 73.5%, rgba(0, 0, 0, 0) 100%);
+}
+
+// .mainSection:after{
+//   content: url(../../public/assets/leftVector.png);
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   height: 100%;
+//   // background-image: url(../../public/assets/leftVector.png);
+//   background-size: cover;
+// }
+
+@keyframes scrolling-images {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2284px 0;
+  }
+}
+@-webkit-keyframes scrolling-images {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2284px 0;
+  }
+}
+
+
+.HeadingSection {
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    i{
+        font-weight: 900;
+    }
+  }
+}
+
+.counterDetail{
+  .detail{
+    h1{
+      font-size: 8em;
+      font-weight: 900;
+    }
+    p{
+      text-align: left !important;
+      padding: 0;
+    }
+  }
+}
+
+.counterDetail{
+  padding-top: 2em;
+}
+
+.team{
+  .HeadingSection{
+    text-align: center;
+    margin-bottom: 3em;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 80px !important;
+  height: 80px !important;
+  z-index: 10 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  cursor: pointer !important;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 6px 25px rgba(255, 255, 255, 0.35) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  &:before {
+    font-size: 22px !important;
+    color: #ffffffcc !important;
+  }
+}
+
+.slick-prev {
+  left: -100px !important;
+}
+
+.slick-next {
+  right: -100px !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none !important;
+}
+
+// app/styles/global.scss
+
+
+
+.hero-footer {
+  // min-height: 100vh;
+  // padding-top: 140px;
+  // padding-bottom: 80px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  text-align: center;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+.hero-title span.question {
+  color: #6ca8ff;
+}
+
+.hero-subtitle {
+  margin-top: 8px;
+  font-size: clamp(1.6rem, 2.3vw, 2.2rem);
+  text-align: center;
+  font-weight: 500;
+}
+
+.hero-cta-btn {
+  margin-top: 32px;
+  padding: 14px 40px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.hero-cta-btn .bi-arrow-right {
+  margin-left: 10px;
+}
+
+.footer-main {
+  border-top: 1px solid #222;
+  padding-top: 5em;
+  padding-bottom: 24px;
+}
+
+.brand-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.footer-text {
+  margin-top: 16px;
+  max-width: 520px;
+  line-height: 1.7;
+  color: #c0c0c0;
+}
+
+.social-icons a {
+  font-size: 1.4rem;
+  margin-right: 18px;
+  color: #fff;
+}
+
+.social-icons a:hover {
+  color: #6ca8ff;
+}
+
+.footer-links a {
+  color: #f5f5f5;
+  margin-left: 28px;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #6ca8ff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding-top: 30px;
+  padding-bottom: 6px;
+  font-size: 0.85rem;
+  color: #9a9a9a;
+}
+
+.back-to-top-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #111;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 20;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.back-to-top-btn .bi-arrow-up {
+  font-size: 1.4rem;
+}
+
+
+.footerlogo{
+  img{
+    position: relative !important;
+    width: 25% !important;
+    margin-bottom: 2em;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 2em;
+  }
+}
+
+.ctaSection{
+  padding: 4em 0;
+}

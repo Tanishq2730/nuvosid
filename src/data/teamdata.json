@@ -1,0 +1,22 @@
+[
+  {
+    "name": "James Smith",
+    "role": "CEO, neurolyze Inc",
+    "image": "https://picsum.photos/120?random=1"
+  },
+  {
+    "name": "Julia Tidbill",
+    "role": "CTO, neurolyze Inc",
+    "image": "https://picsum.photos/120?random=2"
+  },
+  {
+    "name": "Allison Pick",
+    "role": "COO, neurolyze Inc",
+    "image": "https://picsum.photos/120?random=3"
+  },
+  {
+    "name": "James Smiths",
+    "role": "CEO, neurolyze Incss",
+    "image": "https://picsum.photos/120?random=1"
+  }
+]

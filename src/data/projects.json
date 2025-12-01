@@ -1,0 +1,19 @@
+[
+  {
+    "id": "p1",
+    "title": "Harbor Innovation Center",
+    "location": "Boston, MA"
+  },
+  {
+    "id": "p2",
+    "title": "Sierra Research Lab",
+    "location": "Reno, NV"
+  },
+  {
+    "id": "p3",
+    "title": "Cedar Bridge Campus",
+    "location": "Austin, TX"
+  }
+]
+
+
