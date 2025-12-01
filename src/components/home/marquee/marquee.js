@@ -2,7 +2,6 @@
 import React from "react";
 import styles from './Marquee.module.scss';
 
-
 const Marquee = () => {
   const items = [
     { id: "03", text: "Chic" },
@@ -19,7 +18,7 @@ const Marquee = () => {
         <div className={styles.marquee}>
           <div className={styles.track}>
             {items.map((item, index) => (
-              <span key={index} className={styles.item}>
+              <span key={`${item.id}-${index}`} className={styles.item}>
                 <sup className={styles.num}>{item.id}</sup>
                 {item.text}
                 <span className={styles.slash}> / </span>
@@ -28,7 +27,7 @@ const Marquee = () => {
 
             {/* Duplicate for infinite loop */}
             {items.map((item, index) => (
-              <span key={"dup-" + index} className={styles.item}>
+              <span key={`dup-${item.id}-${index}`} className={styles.item}>
                 <sup className={styles.num}>{item.id}</sup>
                 {item.text}
                 <span className={styles.slash}> / </span>
