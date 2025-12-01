@@ -422,3 +422,57 @@ border-radius: 20px;
 .ctaSection{
   padding: 4em 0;
 }
+
+.marqueeWrapper {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: inline-block;
+  animation: scroll 28s linear infinite;
+}
+
+.item {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 40px;
+}
+
+.num {
+  font-size: 14px;
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.slash {
+  opacity: 0.6;
+  margin-left: 20px;
+  font-size: 80px;
+  line-height: 0;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional: Hover pause */
+.track:hover {
+  animation-play-state: paused;
+}

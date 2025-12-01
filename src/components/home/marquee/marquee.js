@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import styles from './Marquee.module.scss';
 
 const Marquee = () => {
   const items = [
@@ -14,23 +13,23 @@ const Marquee = () => {
 
   return (
     <div className="mainSection">
-      <div className={`container-fluid ${styles.marqueeWrapper}`}>
-        <div className={styles.marquee}>
-          <div className={styles.track}>
+      <div className="container-fluid marquee-wrapper">
+        <div className="marquee">
+          <div className="track">
             {items.map((item, index) => (
-              <span key={`${item.id}-${index}`} className={styles.item}>
-                <sup className={styles.num}>{item.id}</sup>
+              <span key={`${item.id}-${index}`} className="item">
+                <sup className="num">{item.id}</sup>
                 {item.text}
-                <span className={styles.slash}> / </span>
+                <span className="slash"> / </span>
               </span>
             ))}
 
             {/* Duplicate for infinite loop */}
             {items.map((item, index) => (
-              <span key={`dup-${item.id}-${index}`} className={styles.item}>
-                <sup className={styles.num}>{item.id}</sup>
+              <span key={`dup-${item.id}-${index}`} className="item">
+                <sup className="num">{item.id}</sup>
                 {item.text}
-                <span className={styles.slash}> / </span>
+                <span className="slash"> / </span>
               </span>
             ))}
           </div>
