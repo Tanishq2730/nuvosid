@@ -64,7 +64,7 @@ export default function Counter() {
         <div className="counterDetail">
           <div className="row">
             {data.map((item, index) => (
-              <div key={index} className="col-md-3">
+              <div key={index} className="col-md-3 col-sm-6 col-12">
                 <div className="detail">
                   <h1 ref={(el) => (countersRef.current[index] = el)}>0</h1>
                   <p>{item.text}</p>

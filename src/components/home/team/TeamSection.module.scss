@@ -14,6 +14,21 @@
     position: relative;
     margin-top: 20em;
     // overflow: hidden;
+
+    @media (max-width: 991px) {
+      margin-top: 15em;
+      border-radius: 16px;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 12em;
+      border-radius: 14px;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 10em;
+      border-radius: 12px;
+    }
   
     &:hover {
       background: rgba(40, 40, 55, 0.85);
@@ -23,6 +38,11 @@
       border-color: #6cc0ffcc;
     box-shadow: 0 0px 20px rgba(197, 221, 255, 0.6);
     animation: tiltLR 1s ease-in-out infinite alternate;
+
+    @media (max-width: 768px) {
+      animation: none;
+      transform: scale(1.02) translateY(-4px);
+    }
     }
   }
   
@@ -46,11 +66,36 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -115%);
+
+    @media (max-width: 991px) {
+      width: 75%;
+      transform: translate(-50%, -110%);
+    }
+
+    @media (max-width: 768px) {
+      width: 70%;
+      transform: translate(-50%, -105%);
+      border-radius: 16px 16px 0px 0px;
+    }
+
+    @media (max-width: 480px) {
+      width: 65%;
+      transform: translate(-50%, -100%);
+      border-radius: 12px 12px 0px 0px;
+    }
   }
   
   .cardBody {
     text-align: center;
     padding: 1em;
+
+    @media (max-width: 768px) {
+      padding: 0.85em;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.75em;
+    }
   
     h5 {
       font-size: 1.23rem;
@@ -58,6 +103,16 @@
       font-weight: 700;
       margin-bottom: 10px;
       letter-spacing: 0.03em;
+
+      @media (max-width: 768px) {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        margin-bottom: 6px;
+      }
     }
   
     p {
@@ -67,6 +122,14 @@
       margin: 0 !important;
       letter-spacing: 0.01em;
       padding: 0;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
     }
   }
   

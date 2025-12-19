@@ -46,4 +46,16 @@
 
 .heroBanner{
   margin: 2em 0;
+
+  @media (max-width: 991px) {
+    margin: 1.5em 0;
+  }
+
+  @media (max-width: 768px) {
+    margin: 1em 0;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0.5em 0;
+  }
 }

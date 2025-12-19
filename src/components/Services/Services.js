@@ -9,7 +9,7 @@ export default function Services() {
         <div className="container">
           <div className="row">
             {services.map((service) => (
-              <div key={service.id} className="col-md-4 h-100">
+              <div key={service.id} className="col-md-4 col-sm-6 col-12 h-100">
                 <Card
                   heading={service.title}
                   imgSrc={service.imgSrc}

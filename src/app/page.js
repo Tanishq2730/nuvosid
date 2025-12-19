@@ -6,6 +6,8 @@ import Counter from "@/components/home/counter/counter";
 import Team from "@/components/home/team/team";
 import Marquee from "@/components/home/marquee/marquee";
 import { HeroParallaxDemo } from "@/components/home/project/HeroParallaxDemo";
+import Video from "@/components/home/video/video";
+import Testimonial from "@/components/home/testimonial/testimonial";
 
 export default function HomePage() {
   const images = [
@@ -21,9 +23,11 @@ export default function HomePage() {
       <About/>
       <ImageMarquee />
       <Counter/>
+      <Video/>
       <Team/>
       <Marquee/>
       <HeroParallaxDemo/>
+      <Testimonial/>
     </>
   );
 }

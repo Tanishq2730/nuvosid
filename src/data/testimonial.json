@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "quote": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness.",
+      "author": "Charles Dickens",
+      "book": "A Tale of Two Cities"
+    },
+    {
+      "id": 2,
+      "quote": "To be, or not to be, that is the question.",
+      "author": "William Shakespeare",
+      "book": "Hamlet"
+    },
+    {
+      "id": 3,
+      "quote": "Call me Ishmael.",
+      "author": "Herman Melville",
+      "book": "Moby-Dick"
+    }
+  ]
+  

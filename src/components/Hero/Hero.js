@@ -51,7 +51,7 @@ const pathLengthFifth = useTransform(scrollYProgress, [0, speedFactor], [0, 1.2]
     <section>
       <div className={`${styles.heroBanner}`}>
         <div
-          className="h-[170vh] w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+          className="h-[170vh] md:h-[150vh] sm:h-[130vh] w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 md:pt-32 sm:pt-24 overflow-clip"
           ref={ref}
         >
           <GoogleGeminiEffect
