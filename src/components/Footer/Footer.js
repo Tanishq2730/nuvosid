@@ -25,7 +25,7 @@ export default function Footer() {
         <h1 className="hero-title">
           Have a great idea in mind<span className="question">?</span>
         </h1>
-        <h2 className="hero-subtitle">lets make it real</h2>
+        <h2 className="hero-subtitle calligraphy-font">lets make it real</h2>
 
         <button className="btn btn-light hero-cta-btn d-inline-flex align-items-center">
           Lets Work Together

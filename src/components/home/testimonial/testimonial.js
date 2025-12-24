@@ -32,12 +32,14 @@ const Testimonial = () => {
 
   return (
     <div className="mainSection">
-      <div className="container">
-        <section className="testimonials-section">
-          <div className="testimonials-wrapper">
-            <div className="HeadingSection">
-              <h1>Testimonial</h1>
-            </div>
+      <section className="testimonials-section">
+        <div className="testimonials-wrapper">
+          <div className="container">
+          <div className="HeadingSection">
+            <h1>Testimonial</h1>
+          </div>
+          </div>
+          <div className="container-fluid">
             <div className="testimonials-track">
               <div className="testimonials-infinite" ref={trackRef}>
                 {loopData.map((item, index) => (
@@ -53,8 +55,8 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
