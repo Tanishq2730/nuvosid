@@ -1,0 +1,119 @@
+
+// Removed @import because we are using Bootstrap classes from global context now
+// and importing global.scss here causes pure selector errors.
+
+.visionMissionSection {
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+// Removed .container and .grid as we are using Bootstrap .container and .row
+
+.cardWrapper {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.card {
+  // Elegant Dark Glassy Effect
+  background: rgba(10, 10, 10, 0.6); 
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  text-align: center;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle gloss reflection
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+
+  &:hover {
+    transform: translateY(-8px);
+    background: rgba(10, 10, 10, 0.8);
+    border-color: rgba(255, 255, 255, 0.2); // Elegant white/grey glow
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.6); // Deep black shadow
+
+    .iconBox {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #ffffff; // Bright white on hover
+    }
+  }
+}
+
+.iconBox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  min-height: 90px;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  // Neutral elegant style
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8; // Slate grey
+  transition: all 0.5s ease;
+  
+  // Icon styling
+  svg {
+    width: 42px;
+    height: 42px;
+    stroke-width: 1.2; // Thinner for elegance
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600; // Slightly lighter for elegance
+  margin-bottom: 1rem;
+  color: #f8fafc;
+  letter-spacing: 0.02em;
+}
+
+.divider {
+  width: 40px;
+  height: 2px; // Thinner
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); // Subtle gradient
+  margin: 0 auto 1.5rem auto;
+}
+
+.description {
+  color: #cbd5e1; // Lighter grey for better contrast on dark
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 90%;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+// Separator line between cards (desktop only)
+.separator {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  right: -1px; // Reset to match column edge more closely
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.noSeparator .separator {
+  display: none;
+}

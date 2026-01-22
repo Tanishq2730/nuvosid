@@ -1,0 +1,153 @@
+
+.howSection {
+  // padding: 6rem 0;
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+  
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text; // Standard property
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+    text-transform: none; // Reset text-transform if proper casing is desired, or keep uppercase if originally uppercase. Original was "How We Do It" mixed case.
+    
+    .highlight {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+  }
+}
+
+.bentoCard {
+  background: #0f1115; // Extremely dark slate
+  border-radius: 2rem; // Very round corners like reference
+  padding: 2.5rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // Hover Effect
+  &:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+// Custom variations for each card index/type
+.cardVariant1 {
+  // Wide card, distinct gradient
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 60%), #0f1115;
+  min-height: 300px;
+  
+  .iconBox {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.cardVariant2 {
+  // Tall/Small card, moody
+  background: radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.15), transparent 60%), #0f1115;
+  text-align: left;
+  
+  .iconBox {
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+}
+
+.cardVariant3 {
+  // Tall/Small card, maybe a greenish or teal hint
+  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.1), transparent 60%), #0f1115;
+  
+  .iconBox {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+}
+
+.cardVariant4 {
+  // Wide card, distinctive
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.05) 0%, rgba(15, 17, 21, 0) 100%), #0f1115;
+  
+  .iconBox {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+    color: white;
+    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+  }
+}
+
+// Content styling
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.iconBox {
+  width: 64px;
+  height: 64px;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  
+  svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1rem;
+  max-width: 80%;
+  
+  // Make titles feel like headings in the reference
+  span {
+    display: block; // Force line break if needed or style specific words
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+// Decorative background blobs similar to reference
+.glowBlob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}

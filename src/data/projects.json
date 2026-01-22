@@ -1,19 +1,29 @@
 [
   {
-    "id": "p1",
-    "title": "Harbor Innovation Center",
-    "location": "Boston, MA"
+    "id": 1,
+    "name": "Corporate Office Building",
+    "image": "/assets/project/p1.png",
+    "description": "A modern corporate office building designed with sustainable architecture and premium materials.",
+    "location": "Mumbai, India",
+    "year": "2024",
+    "category": "Commercial"
   },
   {
-    "id": "p2",
-    "title": "Sierra Research Lab",
-    "location": "Reno, NV"
+    "id": 2,
+    "name": "Luxury Villa Project",
+    "image": "/assets/project/p2.png",
+    "description": "A high-end luxury villa with contemporary interiors and smart home automation.",
+    "location": "Pune, India",
+    "year": "2023",
+    "category": "Residential"
   },
   {
-    "id": "p3",
-    "title": "Cedar Bridge Campus",
-    "location": "Austin, TX"
+    "id": 3,
+    "name": "Commercial Complex",
+    "image": "/assets/project/p3.png",
+    "description": "Multi-storey commercial complex with retail and office spaces.",
+    "location": "Delhi, India",
+    "year": "2022",
+    "category": "Commercial"
   }
 ]
-
-

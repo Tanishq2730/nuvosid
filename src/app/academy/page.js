@@ -1,17 +1,28 @@
+import AboutUs from "@/components/Academy/aboutUs";
+import AcademyBanner from "@/components/Academy/academyBanner";
+import HeadSection from "@/components/Academy/headerSection";
+import How from "@/components/Academy/how";
+import Learn from "@/components/Academy/learn";
+import Started from "@/components/Academy/started";
+import VisionMission from "@/components/Academy/visionMission";
+import ImageMarquee from "@/components/home/clients/ImageMarquee";
+
 export const metadata = {
   title: "Academy | Nuvosid",
 };
 
 export default function AcademyPage() {
   return (
-    <section className="section container">
-      <div className="card">
-        <h1>Nuvosid Academy</h1>
-        <p>
-          Knowledge hub for workshops, talks, and resources in AEC disciplines.
-        </p>
-      </div>
-    </section>
+    <>
+    {/* <HeadSection/> */}
+    <AcademyBanner/>
+    <AboutUs/>
+    <VisionMission/>
+    <How/>
+    <Started/>
+    <Learn/>
+    <ImageMarquee />
+    </>
   );
 }
 

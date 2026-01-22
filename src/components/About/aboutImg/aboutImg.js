@@ -15,6 +15,7 @@ export default function AboutImg() {
                 height={500}
               />
             </div>
+            
           </div>
         </div>
       </div>

@@ -1,33 +1,117 @@
-"use client";
-import { useState } from "react";
-import styles from "./ContactForm.module.scss";
+import React from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
-export default function ContactForm() {
-  const [status, setStatus] = useState(null);
-
-  function onSubmit(e) {
-    e.preventDefault();
-    setStatus("Thanks! We'll be in touch.");
-  }
-
+const ContactUs = () => {
   return (
-    <form className={styles.form} onSubmit={onSubmit}>
-      <div className={styles.row}>
-        <label htmlFor="name">Name</label>
-        <input id="name" name="name" required />
+    <div className="mainSection">
+      <div className="contact-wrapper">
+        <div className="container contact-card-box">
+          <div className="row align-items-center">
+            {/* Left Content */}
+            <div className="col-lg-6 text-white">
+              <h1 className="main-title">
+                Get Your Free <br /> Demo Today!
+              </h1>
+
+              <p className="sub-text">
+                Partnering with forward-thinking companies worldwide to deliver
+                excellence.
+              </p>
+
+              
+
+              <div className="mt-4">
+                <div className="d-flex align-items-start gap-3 mb-2">
+                  <i className="bi bi-telephone" />
+                  <div>
+                    <strong>Phone</strong>
+                    <a href="tel:+13075550133" className="d-block text-white">
+                      +1 (307) 555-0133
+                    </a>
+                  </div>
+                </div>
+                <div className="d-flex align-items-start gap-3 mb-2">
+                  <i className="bi bi-envelope" />
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:contact@nuvosid.com" className="d-block text-white">
+                      contact@nuvosid.com
+                    </a>
+                  </div>
+                </div>
+                <div className="d-flex align-items-start gap-3">
+                  <i className="bi bi-geo-alt" />
+                  <div>
+                    <strong>Address</strong>
+                    <span className="d-block">
+                      123 Business Ave, Suite 400, San Francisco, CA
+                    </span>
+                  </div>
+                </div>
+
+                <div className="social-icons d-flex align-items-center mt-3">
+                  <a href="#" aria-label="LinkedIn">
+                    <i className="bi bi-linkedin" />
+                  </a>
+                  <a href="#" aria-label="Dribbble">
+                    <i className="bi bi-dribbble" />
+                  </a>
+                  <a href="#" aria-label="Instagram">
+                    <i className="bi bi-instagram" />
+                  </a>
+                  <a href="#" aria-label="Facebook">
+                    <i className="bi bi-facebook" />
+                  </a>
+                  <a href="#" aria-label="X">
+                    <i className="bi bi-twitter-x" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Form */}
+            <div className="col-lg-6 d-flex justify-content-center">
+              <div className="form-glass">
+                <div className="row">
+                  <div className="col-6">
+                    <label>First Name</label>
+                    <input
+                      className="form-control"
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div className="col-6">
+                    <label>Last Name</label>
+                    <input
+                      className="form-control"
+                      placeholder="Your Last name"
+                    />
+                  </div>
+                </div>
+
+                <label>Your Email</label>
+                <input
+                  className="form-control"
+                  placeholder="debra.holt@example.com"
+                />
+
+                <label>Mobile Number</label>
+                <input className="form-control" placeholder="(307) 555-0133" />
+
+                <label>Business Name</label>
+                <input
+                  className="form-control"
+                  placeholder="Add Your Business Name"
+                />
+
+                <button className="btn btn-light hero-cta-btn align-items-center w-100">Submit Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className={styles.row}>
-        <label htmlFor="email">Email</label>
-        <input id="email" type="email" name="email" required />
-      </div>
-      <div className={styles.row}>
-        <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" rows={5} required />
-      </div>
-      <button type="submit" className={styles.submit}>Send</button>
-      {status && <p className={styles.status}>{status}</p>}
-    </form>
+    </div>
   );
-}
+};
 
-
+export default ContactUs;

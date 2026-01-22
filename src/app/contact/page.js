@@ -6,11 +6,8 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section className="section container">
-      <h1 style={{ marginBottom: 24 }}>Contact Us</h1>
+    <>
       <ContactForm />
-    </section>
+    </>
   );
 }
-
-

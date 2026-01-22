@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "city": "Mumbai",
+    "lat": 19.076,
+    "lng": 72.8777,
+    "address": "Corporate Office, Mumbai"
+  },
+  {
+    "id": 2,
+    "city": "Ahmedabad",
+    "lat": 23.0225,
+    "lng": 72.5714,
+    "address": "Regional Office, Ahmedabad"
+  },
+  {
+    "id": 3,
+    "city": "Rajasthan",
+    "lat": 26.9124,
+    "lng": 75.7873,
+    "address": "Branch Office, Rajasthan"
+  }
+]

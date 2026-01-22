@@ -42,6 +42,7 @@ export default function Footer() {
                 <div className="footerlogo">
                   <Image
                     src="/assets/logo.png"
+                    // src="/assets/project/p1.png"
                     alt="Logo"
                     fill
                     position="relative"
@@ -96,6 +97,7 @@ export default function Footer() {
                 <a href="#">Consultancy</a>
                 <a href="#">Academy</a>
                 <a href="#">Projects</a>
+                <a href="#">Blog</a>
                 <a href="#">Contact</a>
               </nav>
 

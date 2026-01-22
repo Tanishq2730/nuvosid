@@ -1,3 +1,4 @@
+import HeadSection from "@/components/Projects/headSection";
 import Projects from "@/components/Projects/Projects";
 
 export const metadata = {
@@ -5,11 +6,10 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-  return (
-    <section className="section container">
-      <h1 style={{ marginBottom: 24 }}>Featured Projects</h1>
-      <Projects />
-    </section>
+  return (<>
+    <HeadSection />
+    <Projects />
+  </>
   );
 }
 
