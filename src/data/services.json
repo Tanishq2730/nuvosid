@@ -1,21 +1,21 @@
 [
   {
     "id": "arch",
-    "title": "Architecture",
-    "description": "Concept to delivery: masterplanning, building design, and interiors.",
-    "imgSrc":"/assets/service1.png"
+    "title": "Construction",
+    "description": "Delivering precision-engineered structures with a commitment to safety, quality, and timely execution.",
+    "imgSrc":"/assets/construction.png"
   },
   {
     "id": "eng",
-    "title": "Engineering",
-    "description": "Structural, MEP and sustainability engineering for performance and safety.",
-    "imgSrc":"/assets/service2.png"
+    "title": "Consultancy",
+    "description": "Strategic expert guidance to optimize project efficiency, mitigate risks, and ensure regulatory compliance.",
+    "imgSrc":"/assets/consulting.png"
   },
   {
     "id": "cm",
-    "title": "Construction Management",
-    "description": "Cost control, scheduling, and site coordination for predictable outcomes.",
-    "imgSrc":"/assets/service3.png"
+    "title": "Academy",
+    "description": "Bridging the skills gap by training the next generation of industry leaders with real-world knowledge.",
+    "imgSrc":"/assets/academy.png"
   }
 ]
 

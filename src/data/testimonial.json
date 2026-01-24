@@ -1,21 +1,28 @@
 [
     {
       "id": 1,
-      "quote": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness.",
-      "author": "Charles Dickens",
-      "book": "A Tale of Two Cities"
+      "quote": "Nuvosid’s structural design perfectly balanced the grandeur of the Fairmont Palace Udaipur with robust engineering. They elevated our vision without compromising the intricate architectural aesthetic.",
+      "author": "Ar. Nikhil Mahashur, Principal Architect, Nikhil Mahashur and Associates",
+      "book": "Ar. Nikhil Mahashur, Principal Architect, Nikhil Mahashur and Associates"
     },
     {
       "id": 2,
-      "quote": "To be, or not to be, that is the question.",
+      "quote": "Designing foundations for high-vibration industrial fans requires exceptional structural precision. Nuvosid delivered a robust solution that ensured absolute stability and operational safety for our critical equipment.",
       "author": "William Shakespeare",
-      "book": "Hamlet"
+      "book": "Pawan Raina, Director, VentOne Engineering Pvt. Ltd."
     },
     {
       "id": 3,
-      "quote": "Call me Ishmael.",
+      "quote": "Nuvosid’s engineering design solutions streamlined our complex infrastructure execution with remarkable efficiency. Their technical expertise provided the practical, problem-solving approach we needed for project success.",
       "author": "Herman Melville",
-      "book": "Moby-Dick"
+      "book": "HC Mathur, S.K. Khetan Infra"
+    },
+    {
+      "id": 4,
+      "quote": "Nuvosid’s academy and consulting solutions are truly top-class and bridge a vital skills gap in our industry. I highly recommend their expertise to anyone looking for future-ready engineering excellence.",
+      "author": "Herman Melville",
+      "book": "Sudhir Kumar, Ex-Railway Chief Commissioner"
     }
+    
   ]
   

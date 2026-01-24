@@ -352,6 +352,7 @@ transition: all 0.3s ease;
 
 .counterDetail{
   .detail{
+    text-align: center;
     h1{
       font-size: 8em;
       font-weight: 900;
@@ -369,7 +370,7 @@ transition: all 0.3s ease;
       }
     }
     p{
-      text-align: left !important;
+      text-align: center !important;
       padding: 0;
 
       @media (max-width: 768px) {
@@ -413,8 +414,8 @@ transition: all 0.3s ease;
 
 .slick-prev,
 .slick-next {
-  width: 80px !important;
-  height: 80px !important;
+  width: 50px !important;
+  height: 50px !important;
   z-index: 10 !important;
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(10px) !important;
@@ -786,6 +787,8 @@ transition: all 0.3s ease;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  background:radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 60%), #0f1115;
+  padding: 2em 0;
 }
 
 .track {
@@ -794,9 +797,9 @@ transition: all 0.3s ease;
 }
 
 .item {
-  font-family: "Cormorant Garamond", serif;
+  // font-family: "Cormorant Garamond", serif;
   font-size: 90px;
-  font-weight: 300;
+  font-weight: bold;
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -2151,4 +2154,15 @@ transition: all 0.3s ease;
 @keyframes spinSlow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.heroSubHead {
+  font-size: 22px;
+  text-align: center;
+  display: block;
+  line-height: 1.4;
+  margin-top: 20px;
+  background: none;
+  -webkit-text-fill-color: var(--text-secondary);
+  color: var(--text-secondary);
 }

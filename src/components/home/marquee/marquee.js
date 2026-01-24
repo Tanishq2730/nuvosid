@@ -3,12 +3,12 @@ import React from "react";
 
 const Marquee = () => {
   const items = [
-    { id: "03", text: "Chic" },
-    { id: "01", text: "Endless Summer" },
-    { id: "04", text: "Heaven" },
-    { id: "03", text: "Classic" },
-    { id: "02", text: "Island Adventure" },
-    { id: "05", text: "Neon Light" },
+    { id: "01", text: "Commercial High-Rise" },
+    { id: "02", text: "Large-Scale Infrastructure" },
+    { id: "03", text: "Industrial/Mining" },
+    { id: "04", text: "Sustainable Residential" },
+    { id: "05", text: "Institutional/Education" },
+    // { id: "06", text: "Neon Light" },
   ];
 
   return (

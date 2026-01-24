@@ -134,6 +134,7 @@ const Team = () => (
                   <div className={styles.cardBody}>
                     <h5>{member.name}</h5>
                     <p>{member.role}</p>
+                    <span>{member.designation}</span>
                   </div>
                 </div>
               </div>

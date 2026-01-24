@@ -1,135 +1,86 @@
-.teamSection {
-    // background: #181818;
-    // padding: 60px 10px;
-    // min-height: 90vh;
-  }
+
   
   .card {
-    background: rgba(30, 30, 30, 0.65);
+        background: rgba(30, 30, 30, 0.65);
     backdrop-filter: blur(14px);
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
-    transition: all 0.38s cubic-bezier(0.4,0,0.2,1);
+    transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    margin-top: 20em;
-    // overflow: hidden;
+    margin-top: 16em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 250px;
 
     @media (max-width: 991px) {
-      margin-top: 15em;
-      border-radius: 16px;
+      margin-top: 10em;
+      min-height: 250px;
     }
 
     @media (max-width: 768px) {
-      margin-top: 12em;
-      border-radius: 14px;
-    }
-
-    @media (max-width: 480px) {
-      margin-top: 10em;
-      border-radius: 12px;
+      margin-top: 8em;
     }
   
     &:hover {
       background: rgba(40, 40, 55, 0.85);
-    //   border: 1.5px solid #00eaf0;
-    //   box-shadow: 0 12px 40px rgba(0, 234, 240, 0.12), 0 2px 12px rgba(30,30,30,0.25);
-      transform: scale(1.04) translateY(-8px);
+      transform: scale(1.02) translateY(-8px);
       border-color: #6cc0ffcc;
-    box-shadow: 0 0px 20px rgba(197, 221, 255, 0.6);
-    animation: tiltLR 1s ease-in-out infinite alternate;
-
-    @media (max-width: 768px) {
-      animation: none;
-      transform: scale(1.02) translateY(-4px);
-    }
+      box-shadow: 0 0px 30px rgba(108, 192, 255, 0.4);
     }
   }
   
   .imageWrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    // margin-top: -30px;
-    // margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 85%;
+    z-index: 5;
   }
   
   .cardImg {
-    width: 80%;
-    // height: 18em;
-    border-radius: 20px 20px 0px 0px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.26);
-    -o-object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     object-fit: cover;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -115%);
-
-    @media (max-width: 991px) {
-      width: 75%;
-      transform: translate(-50%, -110%);
-    }
-
-    @media (max-width: 768px) {
-      width: 70%;
-      transform: translate(-50%, -105%);
-      border-radius: 16px 16px 0px 0px;
-    }
-
-    @media (max-width: 480px) {
-      width: 65%;
-      transform: translate(-50%, -100%);
-      border-radius: 12px 12px 0px 0px;
-    }
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .cardBody {
     text-align: center;
-    padding: 1em;
+    padding: 2em 1.5em 1.5em;
+    width: 100%;
 
-    @media (max-width: 768px) {
-      padding: 0.85em;
-    }
-
-    @media (max-width: 480px) {
-      padding: 0.75em;
-    }
-  
     h5 {
-      font-size: 1.23rem;
+      font-size: 1.4rem;
       color: #fff;
       font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: 0.03em;
-
-      @media (max-width: 768px) {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-      }
-
-      @media (max-width: 480px) {
-        font-size: 1rem;
-        margin-bottom: 6px;
-      }
+      margin-bottom: 5px;
+      letter-spacing: 0.02em;
     }
   
     p {
-      color: #b4e4ef;
-      font-size: 1.03rem;
-      font-weight: 400;
+      color: #6cc0ff;
+      font-size: 0.95rem;
+      font-weight: 600;
       margin: 0 !important;
-      letter-spacing: 0.01em;
-      padding: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-      @media (max-width: 768px) {
-        font-size: 0.95rem;
-      }
-
-      @media (max-width: 480px) {
-        font-size: 0.9rem;
-      }
+    span {
+      display: block;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      margin-top: 12px;
+      line-height: 1.5;
+      font-weight: 400;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 12px;
     }
   }
   

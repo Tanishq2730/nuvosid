@@ -92,9 +92,7 @@ export const Header = () => {
         OUR <br /> WORK
       </h1>
       <p className="max-w-2xl text-left md:text-xl mt-8 dark:text-neutral-200" style={{textAlign:"left",padding:"0"}}>
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        Turning visionary concepts into structural reality. From award-winning hospitality to complex industrial infrastructure, we deliver precision in every project.
       </p>
     </div>
   );

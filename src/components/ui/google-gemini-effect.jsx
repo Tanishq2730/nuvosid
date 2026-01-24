@@ -20,9 +20,11 @@ export const GoogleGeminiEffect = ({
         className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || (
           <>
-            Build your Vision<br />
-            Creating Reality<br />
-            New Design
+            Think New<br />
+            Think Nuvosid<br />
+            <span className="heroSubHead">A seamless partnership for all your infrastructure needs. <br/>We help you plan, build, and understand your project from the ground up.
+
+            </span>
           </>
         )}
       </p>

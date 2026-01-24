@@ -48,7 +48,7 @@ const Testimonial = () => {
                     className="testimonial-card"
                   >
                     <p className="testimonial-quote">“{item.quote}”</p>
-                    <p className="testimonial-author">{item.author}</p>
+                    {/* <p className="testimonial-author">{item.author}</p> */}
                     <p className="testimonial-book">{item.book}</p>
                   </article>
                 ))}

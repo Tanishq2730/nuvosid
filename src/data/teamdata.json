@@ -1,22 +1,50 @@
 [
   {
-    "name": "James Smith",
-    "role": "CEO, neurolyze Inc",
-    "image": "https://picsum.photos/120?random=1"
+    "name": "Siddharth Sharma",
+    "role": "Founder & Promoter",
+    "designation":"( B.Tech Civil Engineering, M.Tech Structures, Msc. Interior Design, Member IIID, Member FFSC )",
+    "image": "/assets/team/team1.png"
   },
   {
-    "name": "Julia Tidbill",
-    "role": "CTO, neurolyze Inc",
-    "image": "https://picsum.photos/120?random=2"
+    "name": "Prachi Mehta",
+    "role": "Co-Founder & Promoter",
+    "designation":"Chartered Accountant, Director NIF Global Udaipur",
+    "image": "/assets/team/team2.png"
   },
   {
-    "name": "Allison Pick",
-    "role": "COO, neurolyze Inc",
+    "name": "Arun Kumar Sharma",
+    "role": "Chairman Emeritus",
+    "designation":"B.Tech Civil Engineering ( IIT Delhi ), M.B.A L.L.B, MIE",
     "image": "https://picsum.photos/120?random=3"
   },
   {
-    "name": "Will Smiths",
-    "role": "CEO, neurolyze Incss",
+    "name": "Shreyash Shah",
+    "role": "Executive Director",
+    "designation":"B.Tech Civil Engineering",
+    "image": "/assets/team/team1.png"
+  },
+  {
+    "name": "Divyanshu Shrimali",
+    "role": "Executive Director",
+    "designation":"B.Tech Civil Engineering",
+    "image": "https://picsum.photos/120?random=3"
+  },
+  {
+    "name": "Shantanu Sharma",
+    "role": "Architect & Associated Consultant",
+    "designation":"B. Arc, M. Arch Uran Planning, Member COA, Member IIID, Member IIA, Certified Valuer, Member ITPI",
+    "image": "https://picsum.photos/120?random=4"
+  },
+  {
+    "name": "Divya Sharma",
+    "role": "Architect & Associated Consultant",
+    "designation":"B. Arc, M. Arch Landscape Design & Planning, Member COA, Member IIID, Member IIA",
+    "image": "https://picsum.photos/120?random=3"
+  },
+  {
+    "name": "Shreyash Shah",
+    "role": "Executive Director",
+    "designation":"B.Tech Civil Engineering",
     "image": "https://picsum.photos/120?random=4"
   }
 ]
