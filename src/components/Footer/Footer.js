@@ -23,12 +23,12 @@ export default function Footer() {
       {/* Center hero text */}
       <section className="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center ctaSection">
         <h1 className="hero-title">
-          Have a great idea in mind<span className="question">?</span>
+          Have a New Project in Mind<span className="question">?</span>
         </h1>
-        <h2 className="hero-subtitle calligraphy-font">lets make it real</h2>
+        <h2 className="hero-subtitle calligraphy-font">lets Fastrack things</h2>
 
         <button className="btn btn-light hero-cta-btn d-inline-flex align-items-center">
-          Lets Work Together
+          Contact Us
           <i className="bi bi-arrow-right" />
         </button>
       </section>

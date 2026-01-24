@@ -31,6 +31,8 @@ import { GoogleGeminiEffect } from "../ui/google-gemini-effect";
 import styles from "./Hero.module.scss";
 import { Section } from "lucide-react";
 
+import Particles from "../ui/particles";
+
 export default function Hero() {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
@@ -40,11 +42,11 @@ export default function Hero() {
 
   const speedFactor = 0.4; // smaller means faster
 
-const pathLengthFirst = useTransform(scrollYProgress, [0, speedFactor], [0.2, 1.2]);
-const pathLengthSecond = useTransform(scrollYProgress, [0, speedFactor], [0.15, 1.2]);
-const pathLengthThird = useTransform(scrollYProgress, [0, speedFactor], [0.1, 1.2]);
-const pathLengthFourth = useTransform(scrollYProgress, [0, speedFactor], [0.05, 1.2]);
-const pathLengthFifth = useTransform(scrollYProgress, [0, speedFactor], [0, 1.2]);
+  const pathLengthFirst = useTransform(scrollYProgress, [0, speedFactor], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, speedFactor], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, speedFactor], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, speedFactor], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, speedFactor], [0, 1.2]);
 
 
   return (
@@ -54,6 +56,12 @@ const pathLengthFifth = useTransform(scrollYProgress, [0, speedFactor], [0, 1.2]
           className="h-[170vh] md:h-[150vh] sm:h-[130vh] w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 md:pt-32 sm:pt-24 overflow-clip"
           ref={ref}
         >
+          <Particles
+            className="absolute inset-0 z-0"
+            quantity={150}
+            staticity={30}
+            ease={50}
+          />
           <GoogleGeminiEffect
             pathLengths={[
               pathLengthFirst,

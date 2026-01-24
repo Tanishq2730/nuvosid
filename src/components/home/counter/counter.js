@@ -8,49 +8,36 @@ export default function Counter() {
   const countersRef = useRef([]);
 
   useEffect(() => {
-    function animateCount(el, end) {
-      let start = 0;
-      let duration = 5000; // 2 seconds
-      let startTime = null;
+    import("gsap").then(({ gsap }) => {
+      import("gsap/ScrollTrigger").then(({ ScrollTrigger }) => {
+        gsap.registerPlugin(ScrollTrigger);
 
-      function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-        const progress = timestamp - startTime;
-        const value = Math.min(Math.floor((progress / duration) * end), end);
-        el.innerText = value;
-        if (progress < duration) {
-          window.requestAnimationFrame(step);
-        } else {
-          el.innerText = end; // ensure correct end value
+        function animateCount(el, end) {
+          let obj = { value: 0 };
+          gsap.to(obj, {
+            value: end,
+            duration: 2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 80%", // Animates when top of section hits 80% of viewport
+              once: true,
+            },
+            onUpdate: () => {
+              if (el) el.innerText = Math.floor(obj.value);
+            },
+            onComplete: () => {
+              if (el) el.innerText = end;
+            }
+          });
         }
-      }
-      window.requestAnimationFrame(step);
-    }
 
-    function onScroll() {
-      if (!sectionRef.current || hasAnimated) return;
-
-      const rect = sectionRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Trigger animation when section is at least half in view
-      if (rect.top < windowHeight && rect.bottom > 0) {
         countersRef.current.forEach((el, idx) => {
           if (el) animateCount(el, data[idx].number);
         });
-        setHasAnimated(true);
-        window.removeEventListener("scroll", onScroll);
-      }
-    }
-
-    window.addEventListener("scroll", onScroll);
-    // Check once if section already visible on mount
-    onScroll();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [hasAnimated]);
+      });
+    });
+  }, []);
 
   return (
     <div className="mainSection" ref={sectionRef}>
