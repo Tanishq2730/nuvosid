@@ -1,5 +1,6 @@
 import AboutUs from "@/components/Academy/aboutUs";
 import AcademyBanner from "@/components/Academy/academyBanner";
+import CoursesPlan from "@/components/Academy/coursesPlan";
 import HeadSection from "@/components/Academy/headerSection";
 import How from "@/components/Academy/how";
 import Learn from "@/components/Academy/learn";
@@ -18,6 +19,7 @@ export default function AcademyPage() {
     <AcademyBanner/>
     <AboutUs/>
     <VisionMission/>
+    <CoursesPlan/>
     <How/>
     <Started/>
     <Learn/>

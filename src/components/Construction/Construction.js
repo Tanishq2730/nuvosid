@@ -7,81 +7,121 @@ import Image from "next/image";
 const serviceData = [
     {
         id: 1,
-        title: "Residential Construction",
-        description: "Building dream homes with precision, quality, and a focus on sustainable living. From custom designs to master-planned communities.",
+        title: "Industrial Construction",
+        description: "Delivering high-performance industrial facilities designed for operational efficiency and safety. From complex manufacturing plants to logistics hubs, we build robust infrastructure that drives productivity.",
         image: "/assets/construction/service1.png",
         details: [
             {
-                title: "Custom Home Building",
-                content: "Tailored solutions for your unique lifestyle. We handle everything from foundation to finish, ensuring your vision comes to life."
+                title: "Manufacturing Plants & Factories",
+                content: "We design and construct production facilities with optimized layouts for workflow efficiency, heavy-duty flooring for machinery, and integrated MEP systems to support 24/7 operations."
             },
             {
-                title: "Multi-Family Housing",
-                content: "Efficient and high-quality construction for apartments and condominiums, maximizing value and comfort."
+                title: "Warehousing & Distribution Centers",
+                content: "Specializing in large-span Pre-Engineered Buildings (PEB) and high-bay warehousing solutions that maximize storage volume and streamline logistics and supply chain operations."
             },
             {
-                title: "Green Building Solutions",
-                content: "Eco-friendly construction practices using sustainable materials and energy-efficient designs."
+                title: "Heavy Machinery Foundations",
+                content: "Expert engineering of vibration-resistant foundations and reinforced concrete structures capable of supporting heavy industrial equipment, ensuring zero operational downtime."
             }
         ]
     },
     {
         id: 2,
         title: "Commercial Construction",
-        description: "delivering state-of-the-art commercial spaces that drive business growth. We specialize in offices, retail centers, and industrial facilities.",
+        description: "Creating modern workspaces and retail environments that elevate business potential. We deliver aesthetically striking and functionally superior commercial structures tailored to your brand’s corporate vision.",
         image: "/assets/construction/service2.png",
         details: [
             {
-                title: "Office Complexes",
-                content: "Modern workspaces designed for productivity and collaboration, featuring smart building technologies."
+                title: "Corporate Office Towers",
+                content: "Building future-ready workspaces that blend iconic architectural facades with sustainable energy systems and flexible floor plates to enhance employee productivity."
             },
             {
-                title: "Retail & Shopping Centers",
-                content: "Attractive and functional retail environments that enhance customer experience and foot traffic."
+                title: "Retail Complexes & Malls",
+                content: "Constructing immersive retail destinations with high-quality finishes, efficient crowd-flow planning, and robust structural longevity to handle high footfall."
             },
             {
-                title: "Industrial & Warehousing",
-                content: "Robust construction for heavy-duty operations, focusing on safety, logistics, and durability."
+                title: "Mixed-Use Developments",
+                content: "Seamlessly integrating residential, commercial, and recreational zones into a single cohesive structure, maximizing land value and community convenience."
             }
         ]
     },
     {
         id: 3,
-        title: "Renovation & Remodeling",
-        description: "Transforming existing spaces into modern masterpieces. We breathe new life into outdated structures with careful planning and execution.",
+        title: "Hospital Construction",
+        description: "Engineering state-of-the-art healthcare facilities where patient well-being meets operational excellence. We specialize in executing complex medical infrastructure that demands absolute precision, hygiene, and regulatory compliance.",
         image: "/assets/construction/service3.png",
         details: [
             {
-                title: "Interior Renovations",
-                content: "Complete overhauls of living spaces, kitchens, and bathrooms to reflect contemporary trends."
+                title: "Multi-Specialty Hospitals",
+                content: "Delivering turnkey hospital infrastructure including sterile Operation Theaters (OTs), ICUs, and patient wards, strictly adhering to NABH and global healthcare construction standards."
             },
             {
-                title: "Exterior Facelifts",
-                content: "Enhancing curb appeal with new siding, roofing, and structural improvements."
+                title: "Medical Research Laboratories ",
+                content: "Building bio-safe environments with specialized HVAC systems, chemical-resistant surfaces, and containment zones required for sensitive medical research."
             },
             {
-                title: "Historic Restoration",
-                content: "Preserving the charm of the past while integrating modern amenities and structural structural stability."
+                title: "Advanced Diagnostic Centers",
+                content: "Constructing specialized facilities with lead shielding and structural reinforcement necessary to house heavy imaging equipment like MRI and CT scanners safely."
             }
         ]
     },
     {
         id: 4,
-        title: "Architectural Planning",
-        description: "Comprehensive planning and design services that lay the foundation for successful projects. We bridge the gap between vision and reality.",
+        title: "Hospitality Construction",
+        description: "Crafting world-class hospitality experiences through exquisite structural design and execution. We turn architectural grandeur into reality, delivering luxury resorts and hotels that stand as iconic landmarks.",
         image: "/assets/construction/service4.png",
         details: [
             {
-                title: "Blueprint & Design",
-                content: "Detailed architectural drawings and 3D modeling to visualize every aspect of the project before construction begins."
+                title: "Luxury Hotels & Resorts",
+                content: "Executing intricate architectural designs with premium craftsmanship, from grand lobbies to guest suites, ensuring the structure supports the highest standards of luxury (e.g., Fairmont Palace projects)."
             },
             {
-                title: "Project Management",
-                content: "End-to-end management ensuring timelines, budgets, and quality standards are strictly met."
+                title: "Boutique Guest Houses",
+                content: "Focusing on bespoke construction that highlights unique design elements and intimate atmospheres, perfect for niche hospitality brands."
             },
             {
-                title: "Permitting & Zoning",
-                content: "Navigating complex regulatory landscapes to ensure full compliance and smooth project execution."
+                title: "Recreational & Leisure Facilities",
+                content: "Building structurally sound swimming pools, clubhouses, and landscaped zones that integrate seamlessly with the natural terrain and hotel infrastructure."
+            }
+        ]
+    },
+    {
+        id: 5,
+        title: "Residential Construction",
+        description: "Building more than just homes; we create sustainable living ecosystems. From modern high-rise apartments to bespoke private villas, our residential projects prioritize comfort, design, and lasting structural quality.",
+        image: "/assets/construction/service4.png",
+        details: [
+            {
+                title: "High-Rise Apartments",
+                content: "Using advanced formwork technologies to deliver safe, earthquake-resistant high-rise towers that offer modern amenities and efficient space utilization."
+            },
+            {
+                title: "Private Villas & Townships",
+                content: "Constructing expansive master-planned communities and custom luxury villas that reflect personal style while ensuring superior build quality and privacy."
+            },
+            {
+                title: "Green Building Solutions",
+                content: "Integrating eco-friendly construction materials, rainwater harvesting, and energy-efficient designs to create homes that are sustainable and cost-effective to run."
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "Public Sector Construction",
+        description: "Strengthening the nation’s backbone with durable public infrastructure. We partner with government bodies to deliver large-scale civic projects—from administrative buildings to transit networks—on time and within budget.",
+        image: "/assets/construction/service4.png",
+        details: [
+            {
+                title: "Government Administrative Buildings",
+                content: "Constructing secure, durable, and functional civic centers and offices that serve as the operational hubs for public administration."
+            },
+            {
+                title: "Transport Infrastructure (Roads & Bridges) ",
+                content: "Executing critical heavy civil works, including flyovers, bridges, and arterial roads designed to withstand heavy traffic loads and environmental stress."
+            },
+            {
+                title: "Civic Amenities & Utilities",
+                content: "Building essential community infrastructure such as public parks, water treatment plants, and drainage systems that improve the quality of urban life."
             }
         ]
     }

@@ -23,80 +23,97 @@ export default function AcademyBanner() {
 
     return (
         <>
-        <div className="mainSection">
-            <section className="academySection">
-            {/* Particle Background */}
-            <div className="particleContainer">
-                {particles.map((p) => (
-                    <motion.div
-                        key={p.id}
-                        className="particle"
-                        style={{
-                            width: p.size,
-                            height: p.size,
-                            top: p.top,
-                            left: p.left,
-                        }}
-                        animate={{
-                            y: [0, -100, 0],
-                            opacity: [0.2, 0.6, 0.2],
-                        }}
-                        transition={{
-                            duration: p.duration,
-                            repeat: Infinity,
-                            ease: "easeInOut",
-                        }}
-                    />
-                ))}
-                {/* Glow Effects */}
-                <div className="glowSpot glowLeft" />
-                <div className="glowSpot glowRight" />
+            <div className="mainSection">
+                <section className="academySection">
+                    {/* Particle Background */}
+                    <div className="particleContainer">
+                        {particles.map((p) => (
+                            <motion.div
+                                key={p.id}
+                                className="particle"
+                                style={{
+                                    width: p.size,
+                                    height: p.size,
+                                    top: p.top,
+                                    left: p.left,
+                                }}
+                                animate={{
+                                    y: [0, -100, 0],
+                                    opacity: [0.2, 0.6, 0.2],
+                                }}
+                                transition={{
+                                    duration: p.duration,
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
+                                }}
+                            />
+                        ))}
+                        {/* Glow Effects */}
+                        <div className="glowSpot glowLeft" />
+                        <div className="glowSpot glowRight" />
+                    </div>
+
+                    <div className="container position-relative z-2">
+                        <div className="academyBanner">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                <h5 className="subTitle">ARE YOU READY TO</h5>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <h1 className="mainTitle">ELEVATE?</h1>
+                            </motion.div>
+
+                            <motion.div
+                                className="brandImageWrapper"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.4 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className="glowBehind" />
+                                <img src="/assets/surpassLogo.png" alt="Surpass Logo" />
+                            </motion.div>
+
+                            <motion.p
+                                className="quote"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ duration: 1, delay: 0.6 }}
+                                viewport={{ once: true }}
+                            >
+                                “We are a group of consulting <span className="highlight">Architects</span> | <span className="highlight">Engineers</span> | <span className="highlight">Designers</span> | <span className="highlight">Educators</span> & <span className="highlight">Entrepreneurs</span> working together to Make India Skill Driven”
+                            </motion.p>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.8 }}
+                                viewport={{ once: true }}
+                            >
+                                <a
+                                    href="https://lms.surpass.academy/login"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="academyLoginBtn"
+                                >
+                                    <span>Student Portal Login</span>
+                                    <i className="bi bi-person-fill ms-2"></i>
+                                </a>
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div className="container position-relative z-2">
-                <div className="academyBanner">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        <h5 className="subTitle">ARE YOU READY TO</h5>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        viewport={{ once: true }}
-                    >
-                        <h1 className="mainTitle">ELEVATE?</h1>
-                    </motion.div>
-
-                    <motion.div
-                        className="brandImageWrapper"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="glowBehind" />
-                        <img src="/assets/surpassLogo.png" alt="Surpass Logo" />
-                    </motion.div>
-
-                    <motion.p
-                        className="quote"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 1, delay: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        “We are a group of consulting <span className="highlight">Architects</span> | <span className="highlight">Engineers</span> | <span className="highlight">Designers</span> | <span className="highlight">Educators</span> & <span className="highlight">Entrepreneurs</span> working together to Make India Skill Driven”
-                    </motion.p>
-                </div>
-            </div>
-        </section>
-        </div>
         </>
     );
 }

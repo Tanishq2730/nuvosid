@@ -154,6 +154,29 @@ footer {
   }
 }
 
+.sectionTitle {
+  font-size: 3rem !important;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-align: center;
+
+  .accent {
+    color: var(--accent-custom);
+    position: relative;
+    background: linear-gradient(120deg, var(--accent-custom), #9cd4ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem !important;
+  }
+}
+
 .scrollHead{
   margin-bottom: 1em;
   color: #fff;
@@ -354,7 +377,7 @@ transition: all 0.3s ease;
   .detail{
     text-align: center;
     h1{
-      font-size: 8em;
+      font-size: 6em;
       font-weight: 900;
 
       @media (max-width: 991px) {
@@ -788,7 +811,7 @@ transition: all 0.3s ease;
   overflow: hidden;
   width: 100%;
   background:radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 60%), #0f1115;
-  padding: 2em 0;
+  padding: 4em 0;
 }
 
 .track {
@@ -798,7 +821,7 @@ transition: all 0.3s ease;
 
 .item {
   // font-family: "Cormorant Garamond", serif;
-  font-size: 90px;
+  font-size: 32px;
   font-weight: bold;
   color: #fff;
   display: inline-flex;
@@ -1432,16 +1455,95 @@ transition: all 0.3s ease;
 }
 
 .map-wrapper {
-  height: 450px;
-  border-radius: 20px;
+  height: 600px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
 
   .leaflet-container {
     height: 100%;
     width: 100%;
     filter: brightness(0.9) contrast(1.1);
+    background: #000 !important;
   }
+
+  /* Custom Decent Marker Styles */
+  .custom-map-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .marker-dot-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .marker-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-custom);
+      border-radius: 50%;
+      border: 1.5px solid #fff;
+      box-shadow: 0 0 10px var(--accent-custom);
+      position: relative;
+      z-index: 2;
+    }
+
+    .marker-pulse {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(108, 192, 255, 0.4);
+      border-radius: 50%;
+      animation: mapPulse 2s infinite;
+      z-index: 1;
+    }
+
+    .marker-label {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(15, 17, 21, 0.85);
+        border: 1px solid rgba(108, 192, 255, 0.3);
+        padding: 4px 8px;
+        border-radius: 6px;
+        color: white;
+        font-size: 0.7rem;
+        font-weight: 600;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0.8;
+        backdrop-filter: blur(4px);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    &:hover .marker-label {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+        border-color: var(--accent-custom);
+        z-index: 10;
+        background: var(--bg-elevated);
+    }
+  }
+
+  .popup-content {
+    color: #333;
+    padding: 5px;
+    strong { color: var(--accent-custom); font-size: 1rem; }
+    p { margin: 8px 0 0; font-size: 0.9rem; color: #666; }
+  }
+}
+
+@keyframes mapPulse {
+  0% { transform: scale(0.5); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
 }
 
 /* Academy Section Premium Design */
@@ -1575,6 +1677,42 @@ transition: all 0.3s ease;
     @media (max-width: 768px) {
       font-size: 1rem;
       padding: 0 1rem;
+    }
+  }
+
+  .academyLoginBtn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgba(108, 192, 255, 0.4);
+    padding: 10px 32px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    margin-top: 2.5rem;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      background: rgba(108, 192, 255, 0.12);
+      border-color: var(--accent-custom);
+      box-shadow: 0 0 20px rgba(108, 192, 255, 0.15);
+
+      i {
+        transform: translateX(3px);
+      }
+    }
+
+    i {
+      font-size: 1.1rem;
+      color: var(--accent-custom);
+      transition: transform 0.4s ease;
     }
   }
 }
@@ -1730,22 +1868,8 @@ transition: all 0.3s ease;
     z-index: 1;
   }
 
-  .sectionTitle {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 900;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
 
-    .accent {
-      color: var(--accent-custom);
-      position: relative;
-      background: linear-gradient(120deg, var(--accent-custom), #9cd4ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+
 
   .statsGrid {
     display: grid;
@@ -2165,4 +2289,168 @@ transition: all 0.3s ease;
   background: none;
   -webkit-text-fill-color: var(--text-secondary);
   color: var(--text-secondary);
+}
+
+/* Academy Courses - Animated Pathway Upgrade */
+.animatedPathwaySection {
+  // padding: 120px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+
+  .svgConnector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    
+    path {
+      fill: none;
+      stroke: var(--accent-custom);
+      stroke-width: 1.5;
+      opacity: 0.15;
+    }
+
+    .energyFlow {
+      stroke-width: 2.5;
+      opacity: 0.8;
+      stroke-dasharray: 40, 150;
+      animation: flowEnergy 4s linear infinite;
+      filter: drop-shadow(0 0 10px var(--accent-custom));
+    }
+  }
+
+  .nodesContainer {
+    position: relative;
+    z-index: 2;
+  }
+
+  .courseNode {
+    background: rgba(18, 22, 31, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      transform: translateY(-15px) scale(1.05);
+      border-color: var(--accent-custom);
+      background: rgba(18, 22, 31, 0.8);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+
+      .nodeIcon {
+        transform: rotateY(180deg);
+        box-shadow: 0 0 30px var(--accent-custom);
+      }
+    }
+
+    .nodeIcon {
+      width: 70px;
+      height: 70px;
+      background: rgba(108, 192, 255, 0.1);
+      border: 1px solid var(--accent-custom);
+      border-radius: 20px;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--accent-custom);
+      transition: all 0.8s ease;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .subTitle {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+  }
+
+  .centralSubscriptionNode {
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(108, 192, 255, 0.3);
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    backdrop-filter: blur(20px);
+    
+    .glow {
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        box-shadow: inset 0 0 30px rgba(108, 192, 255, 0.15);
+        animation: pulseSubPrice 4s infinite ease-in-out;
+    }
+
+    .price {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+      
+      small {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: var(--accent-custom);
+        margin-left: 10px;
+      }
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 15px;
+    }
+  }
+}
+
+@keyframes flowEnergy {
+  0% { stroke-dashoffset: 190; }
+  100% { stroke-dashoffset: -190; }
+}
+
+@keyframes pulseSubPrice {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.02); }
+}
+
+@media (max-width: 991px) {
+  .animatedPathwaySection {
+      .svgConnector { display: none; }
+      .centralSubscriptionNode {
+          padding: 30px;
+          .price { font-size: 2.5rem; }
+          .tagline { font-size: 1rem; }
+      }
+  }
 }

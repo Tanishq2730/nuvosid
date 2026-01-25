@@ -29,8 +29,7 @@ export default function ValueCard() {
             <div>
               <h5>Innovation</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+                We embrace cutting-edge technology and sustainable design thinking to engineer future-proof solutions that redefine industry standards.
               </p>
             </div>
           </div>
@@ -71,8 +70,7 @@ export default function ValueCard() {
             <div>
               <h5>Accessibility</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+                We believe in designing inclusive environments and making world-class engineering expertise and education accessible to everyone.
               </p>
             </div>
           </div>
@@ -99,8 +97,7 @@ export default function ValueCard() {
             <div>
               <h5>Openness</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+                We build trust through absolute transparency, honest consultancy, and a collaborative spirit that keeps our partners informed at every step.
               </p>
             </div>
           </div>
@@ -133,8 +130,7 @@ export default function ValueCard() {
             <div>
               <h5>Empowerment</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor
+                We are dedicated to upskilling the next generation of industry leaders and empowering our clients to build their boldest visions with confidence.
               </p>
             </div>
           </div>
