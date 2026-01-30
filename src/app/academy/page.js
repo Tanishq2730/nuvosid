@@ -7,6 +7,7 @@ import Learn from "@/components/Academy/learn";
 import Started from "@/components/Academy/started";
 import VisionMission from "@/components/Academy/visionMission";
 import ImageMarquee from "@/components/home/clients/ImageMarquee";
+import Team from "@/components/home/team/team";
 
 export const metadata = {
   title: "Academy | Nuvosid",
@@ -21,6 +22,7 @@ export default function AcademyPage() {
     <VisionMission/>
     <CoursesPlan/>
     <How/>
+    <Team/>
     <Started/>
     <Learn/>
     <ImageMarquee />
