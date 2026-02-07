@@ -8,7 +8,7 @@ import Marquee from "@/components/home/marquee/marquee";
 import { HeroParallaxDemo } from "@/components/home/project/HeroParallaxDemo";
 import Video from "@/components/home/video/video";
 import Testimonial from "@/components/home/testimonial/testimonial";
-import Map from "@/components/About/map/map";
+import MapWrapper from "@/components/home/MapWrapper";
 
 export default function HomePage() {
   const images = [
@@ -21,15 +21,15 @@ export default function HomePage() {
     <>
       <Hero />
       <Services />
-      <About/>
+      <About />
       <ImageMarquee />
-      <Counter/>
-      <Map />
-      <Video/>
-      <Team/>
-      <Marquee/>
-      <HeroParallaxDemo/>
-      <Testimonial/>
+      <Counter />
+      <MapWrapper />
+      <Video />
+      <Team />
+      <Marquee />
+      <HeroParallaxDemo />
+      <Testimonial />
     </>
   );
 }
