@@ -89,7 +89,7 @@ const serviceData = [
         id: 5,
         title: "Residential Construction",
         description: "Building more than just homes; we create sustainable living ecosystems. From modern high-rise apartments to bespoke private villas, our residential projects prioritize comfort, design, and lasting structural quality.",
-        image: "/assets/construction/service4.png",
+        image: "/assets/construction/service5.png",
         details: [
             {
                 title: "High-Rise Apartments",
@@ -109,7 +109,7 @@ const serviceData = [
         id: 6,
         title: "Public Sector Construction",
         description: "Strengthening the nation’s backbone with durable public infrastructure. We partner with government bodies to deliver large-scale civic projects—from administrative buildings to transit networks—on time and within budget.",
-        image: "/assets/construction/service4.png",
+        image: "/assets/construction/service6.png",
         details: [
             {
                 title: "Government Administrative Buildings",

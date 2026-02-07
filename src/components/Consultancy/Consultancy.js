@@ -7,81 +7,181 @@ import Image from "next/image";
 const consultancyData = [
     {
         id: 1,
-        title: "Project Management",
-        description: "Expert oversight for complex construction projects. We ensure your project is delivered on time, within budget, and to the highest quality standards.",
+        title: "Structural Design",
+        description: "The backbone of safety and stability. Our engineering team ensures your structure stands the test of time and elements. We specialize in complex load analysis and optimizing material efficiency for diverse sectors.",
         image: "/assets/consultancy/service1.png",
         details: [
             {
-                title: "Strategic Planning",
-                content: "Detailed roadmap creation, risk assessment, and resource allocation to set your project up for success."
+                title: "High-Rise Building Design",
+                content: "Advanced structural systems (shear walls, frame-tube structures) designed to withstand high wind speeds, seismic activity, and vertical gravity loads in tall towers."
             },
             {
-                title: "Cost Control",
-                content: "Rigorous budget management and value engineering to maximize ROI without compromising quality."
+                title: "Industrial Shed Design",
+                content: "Robust long-span steel truss and portal frame designs optimized for factories, warehouses, and storage units requiring large column-free spaces."
             },
             {
-                title: "Contract Administration",
-                content: "Professional handling of all contractual agreements, claims, and disputes."
+                title: "Industrial Foundation Design",
+                content: "Heavy-duty foundation engineering capable of supporting massive machinery, minimizing vibration, and handling dynamic industrial loads."
+            },
+            {
+                title: "Roads & Bridges",
+                content: "Infrastructure design including highway alignment, pavement design, and culvert/bridge structural analysis for safe and durable connectivity."
+            },
+            {
+                title: "Pre-Engineered Buildings (PEB)",
+                content: "Efficient, lightweight steel structure designs that are engineered for rapid assembly, cost-effectiveness, and flexibility."
+            },
+            {
+                title: "Pre-Fabricated Structures",
+                content: "Modular design solutions for off-site manufacturing, ensuring speed, precision, and reduced on-site construction waste."
             }
         ]
     },
     {
         id: 2,
-        title: "Cost Consultancy",
-        description: "Precise financial management and quantity surveying services. We provide clarity and control over your project's finances.",
+        title: "Architecture Planning & Landscape Design",
+        description: "Designing spaces that inspire and endure. We blend aesthetics with functionality to create environments that resonate with their inhabitants and respect their surroundings.",
         image: "/assets/consultancy/service2.png",
         details: [
             {
-                title: "Quantity Surveying",
-                content: "Accurate material estimation and cost planning throughout the project lifecycle."
+                title: "Conceptual & Schematic Design",
+                content: "Transforming initial ideas into visual concepts and preliminary layouts."
             },
             {
-                title: "Feasibility Studies",
-                content: "In-depth financial analysis to determine project viability and investment potential."
+                title: "Master Planning",
+                content: "Comprehensive site analysis and zoning strategies for large-scale developments."
             },
             {
-                title: "Tender Management",
-                content: "Streamlined tendering processes to select the best partners and suppliers."
+                title: "Landscape Architecture",
+                content: "Integrating the built environment with nature through sustainable hardscaping, planting schemes, and outdoor living spaces."
+            },
+            {
+                title: "3D Visualization",
+                content: "High-fidelity renderings and walkthroughs to visualize the final outcome before construction begins."
             }
         ]
     },
     {
         id: 3,
-        title: "Sustainability Consulting",
-        description: "Guiding your project towards a greener future. We help you implement eco-friendly practices and achieve sustainability certifications.",
+        title: "MEP Design (Mechanical, Electrical, Plumbing)",
+        description: "The nervous system of your building. We design efficient, invisible systems that ensure comfort, safety, and operational sustainability.",
         image: "/assets/consultancy/service3.png",
         details: [
             {
-                title: "Green Building Certifications",
-                content: "Assistance with LEED, BREEAM, and other sustainability certification processes."
+                title: "HVAC Systems",
+                content: "Energy-efficient heating, ventilation, and air conditioning planning."
             },
             {
-                title: "Energy Efficiency",
-                content: "Analysis and recommendations for optimizing energy consumption and reducing carbon footprint."
+                title: "Electrical Grid & Lighting",
+                content: "Comprehensive wiring layouts, power distribution, and architectural lighting design."
             },
             {
-                title: "Sustainable Materials",
-                content: "Sourcing and selection of environmentally responsible building materials."
+                title: "Plumbing & Sanitary",
+                content: "Optimized water supply networks, waste management, and fixture planning."
+            },
+            {
+                title: "Fire Fighting Systems",
+                content: "Integrated detection and suppression systems to meet strict safety regulations."
             }
         ]
     },
     {
         id: 4,
-        title: "Digital Transformation",
-        description: "Leveraging technology to revolutionize construction processes. We implement BIM and other digital tools for enhanced efficiency.",
+        title: "Drainage System Designs",
+        description: "Advanced water management solutions. We protect your investment from water damage through sophisticated hydraulic engineering and site grading.",
         image: "/assets/consultancy/service4.png",
         details: [
             {
-                title: "BIM Implementation",
-                content: "Integrating Building Information Modeling for better collaboration and visualization."
+                title: "Stormwater Management",
+                content: "Rainwater harvesting, retention ponds, and permeable paving solutions."
             },
             {
-                title: "Digital Twin Tech",
-                content: "Creating digital replicas of physical assets to optimize performance and maintenance."
+                title: "Sewerage & Effluent Treatment",
+                content: "Design of sewage treatment plants (STP) and efficient waste disposal networks."
             },
             {
-                title: "Smart Building Solutions",
-                content: "Consulting on the integration of IoT and smart systems for modern facility management."
+                title: "Site Grading & Flood Mitigation",
+                content: "Strategic terrain modification to prevent waterlogging and erosion."
+            },
+            {
+                title: "Urban Drainage",
+                content: "Sustainable urban drainage systems (SUDS) for municipal or large-community projects."
+            }
+        ]
+    },
+    {
+        id: 5,
+        title: "Detailing & Drafting Works",
+        description: "Bridging the gap between design and fabrication. We provide the high-precision technical drawings that contractors and fabricators need to build with zero error.",
+        image: "/assets/consultancy/service5.png",
+        details: [
+            {
+                title: "Structural Shop Drawings",
+                content: "Detailed fabrication drawings for steel members, connections, and assemblies."
+            },
+            {
+                title: "Rebar Detailing & Bar Bending Schedules (BBS)",
+                content: "Precise reinforcement placement drawings and cutting lists for concrete structures."
+            },
+            {
+                title: "As-Built Drawings",
+                content: "Accurate documentation of the building exactly as constructed for future maintenance and records."
+            },
+            {
+                title: "BIM Modeling",
+                content: "3D Building Information Modeling to detect clashes between structural and MEP elements before construction."
+            },
+            {
+                title: "Fabrication & Erection Drawings",
+                content: "Step-by-step guides for site assembly and component manufacturing."
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: "Project Feasibility Study",
+        description: "Data-driven insights for confident investment. Before you commit capital, we provide the analytics to determine if a project is viable, legal, and profitable.",
+        image: "/assets/consultancy/service6.png",
+        details: [
+            {
+                title: "Cost-Benefit Analysis",
+                content: "Detailed financial projections, budget estimation, and ROI calculations."
+            },
+            {
+                title: "Site Evaluation",
+                content: "Assessing geographical, environmental, and topographical constraints."
+            },
+            {
+                title: "Regulatory Due Diligence",
+                content: "Investigating zoning laws, land-use restrictions, and permitting requirements."
+            },
+            {
+                title: "Risk Assessment",
+                content: "Identifying potential technical, legal, or market hurdles early in the process."
+            }
+        ]
+    },
+    {
+        id: 7,
+        title: "Project Management Consultancy (PMC)",
+        description: "Your advocate from concept to keys. We act as the client's representative, ensuring the project stays on time, within budget, and up to quality standards.",
+        image: "/assets/consultancy/service7.png",
+        details: [
+            {
+                title: "Construction Supervision",
+                content: "On-site monitoring to ensure adherence to drawings and safety protocols."
+            },
+            {
+                title: "Contract Administration",
+                content: "Managing vendor contracts, change orders, and dispute resolution."
+            },
+            {
+                title: "Quality Control (QA/QC)",
+                content: "Rigorous material testing and workmanship inspections."
+            },
+            {
+                title: "Timeline & Budget Tracking",
+                content: "Real-time scheduling and cost control to prevent overruns."
             }
         ]
     }

@@ -618,9 +618,10 @@ transition: all 0.3s ease;
 
 .footer-text {
   margin-top: 16px;
-  max-width: 520px;
+  max-width: 95%;
   line-height: 1.7;
   color: #c0c0c0;
+  text-align: justify;
 
   @media (max-width: 768px) {
     margin-top: 12px;

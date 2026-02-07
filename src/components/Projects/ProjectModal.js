@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const ProjectModal = ({ project, onClose }) => {
     const [isAnimating, setIsAnimating] = useState(false);
@@ -113,6 +114,33 @@ const ProjectModal = ({ project, onClose }) => {
                 </div>
 
                 <div className="modal-body" style={{ padding: "40px" }}>
+                    {project.image && (
+                        <div
+                            className="modal-image"
+                            style={{
+                                width: "100%",
+                                height: "auto",
+                                marginBottom: "30px",
+                                borderRadius: "12px",
+                                overflow: "hidden",
+                                position: "relative",
+                                minHeight: "300px"
+                            }}
+                        >
+                            <Image
+                                src={project.image}
+                                alt={project.name}
+                                width={800}
+                                height={600}
+                                style={{
+                                    width: "100%",
+                                    height: "auto",
+                                    display: "block",
+                                    objectFit: "cover",
+                                }}
+                            />
+                        </div>
+                    )}
                     {project.description && (
                         <p
                             className="description"

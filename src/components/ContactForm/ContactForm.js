@@ -10,7 +10,8 @@ const ContactUs = () => {
             {/* Left Content */}
             <div className="col-lg-6 text-white">
               <h1 className="main-title">
-                Get Your Free <br /> Demo Today!
+                {/* Get Your Free <br /> Demo Today! */}
+                Have a Project in Mind?<br/> Get Expert Advice.
               </h1>
 
               <p className="sub-text">
@@ -26,7 +27,7 @@ const ContactUs = () => {
                   <div>
                     <strong>Phone</strong>
                     <a href="tel:+13075550133" className="d-block text-white">
-                      +1 (307) 555-0133
+                      +91 9636043246
                     </a>
                   </div>
                 </div>
@@ -35,7 +36,7 @@ const ContactUs = () => {
                   <div>
                     <strong>Email</strong>
                     <a href="mailto:contact@nuvosid.com" className="d-block text-white">
-                      contact@nuvosid.com
+                      nuvosid@gmail.com
                     </a>
                   </div>
                 </div>
@@ -44,7 +45,7 @@ const ContactUs = () => {
                   <div>
                     <strong>Address</strong>
                     <span className="d-block">
-                      123 Business Ave, Suite 400, San Francisco, CA
+                      421-425 S.M. LODHA COMPLEX, NEAR COURT CIRCLE,UDAIPUR-313001 ( RAJASTHAN )
                     </span>
                   </div>
                 </div>
@@ -53,9 +54,9 @@ const ContactUs = () => {
                   <a href="#" aria-label="LinkedIn">
                     <i className="bi bi-linkedin" />
                   </a>
-                  <a href="#" aria-label="Dribbble">
+                  {/* <a href="#" aria-label="Dribbble">
                     <i className="bi bi-dribbble" />
-                  </a>
+                  </a> */}
                   <a href="#" aria-label="Instagram">
                     <i className="bi bi-instagram" />
                   </a>

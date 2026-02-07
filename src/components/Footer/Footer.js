@@ -65,18 +65,16 @@ export default function Footer() {
                 </div>
               </Link> */}
               <p className="footer-text">
-                Sit Amet Consectetur. Sed Semper Nisl Consectetur Iaculis Risus
-                Purus Eget Et Ante. Sed At Sollicitudin Nisi Eget. Sit
-                Suspendisse Commodo Etiam Dolor
+                "Nuvosid is a premier turnkey construction service provider with a proven footprint across 37+ locations in India. We leverage the latest design and construction solutions to deliver projects that are safe, cost-effective, and sustainable. From initial concept to final handover, we build with precision and purpose."
               </p>
 
               <div className="social-icons d-flex align-items-center mt-3">
                 <a href="#" aria-label="LinkedIn">
                   <i className="bi bi-linkedin" />
                 </a>
-                <a href="#" aria-label="Dribbble">
+                {/* <a href="#" aria-label="Dribbble">
                   <i className="bi bi-dribbble" />
-                </a>
+                </a> */}
                 <a href="#" aria-label="Instagram">
                   <i className="bi bi-instagram" />
                 </a>
@@ -97,7 +95,7 @@ export default function Footer() {
                 <a href="#">Consultancy</a>
                 <a href="#">Academy</a>
                 <a href="#">Projects</a>
-                <a href="#">Blog</a>
+                {/* <a href="#">Blog</a> */}
                 <a href="#">Contact</a>
               </nav>
 
