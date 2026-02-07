@@ -77,7 +77,7 @@ export default function Footer() {
                 </a> */}
                 <a href="#" aria-label="Instagram">
                   <i className="bi bi-instagram" />
-                </a>
+                </a> 
                 <a href="#" aria-label="Facebook">
                   <i className="bi bi-facebook" />
                 </a>
