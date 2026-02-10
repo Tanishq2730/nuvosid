@@ -36,7 +36,7 @@ export default function Header() {
     { href: "/construction", label: "Construction" },
     { href: "/consultancy", label: "Consultancy" },
     { href: "/academy", label: "Academy" },
-    { href: "/projects", label: "Projects" },
+    // { href: "/projects", label: "Projects" },
     { href: "/contact", label: "Contact" },
   ];
 

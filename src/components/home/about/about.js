@@ -79,13 +79,17 @@ export default function About() {
             <div className="aboutContent">
               <div className="row">
                 <div className="col-md-6 col-12" ref={leftImgRef}>
-                  <div className="aboutImage">
-                    <img
-                      src="/assets/aboutSection1.png"
-                      alt="About Us"
-                      width={500}
-                      height={500}
-                    />
+                  <div className="aboutImage" style={{ width: "100%", height: "100%" }}>
+                    <picture>
+                      <source media="(max-width: 768px)" srcSet="/assets/mobAbout1.png" />
+                      <img
+                        src="/assets/aboutSection1.png"
+                        alt="About Us"
+                        width={500}
+                        height={500}
+                        style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                      />
+                    </picture>
                   </div>
                 </div>
                 <div className="middleSection">
@@ -107,13 +111,17 @@ export default function About() {
                   </div>
                 </div>
                 <div className="col-md-6 col-12" ref={rightImgRef}>
-                  <div className="aboutImage">
-                    <img
-                      src="/assets/aboutSection2.png"
-                      alt="About Us"
-                      width={500}
-                      height={500}
-                    />
+                  <div className="aboutImage" style={{ width: "100%", height: "100%" }}>
+                    <picture>
+                      <source media="(max-width: 768px)" srcSet="/assets/mobAbout2.png" />
+                      <img
+                        src="/assets/aboutSection2.png"
+                        alt="About Us"
+                        width={500}
+                        height={500}
+                        style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                      />
+                    </picture>
                   </div>
                 </div>
               </div>

@@ -10,24 +10,31 @@ export default function Video() {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
+
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        videoRef.current,
-        {
-          width: "40%",
-          borderRadius: "40px",
-        },
-        {
-          width: "100%",
-          borderRadius: "0px",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 40%",
-            end: "top 10%",
-            scrub: 1,
+      // Desktop Animation
+      mm.add("(min-width: 800px)", () => {
+        gsap.fromTo(
+          videoRef.current,
+          {
+            width: "40%",
+            borderRadius: "40px",
           },
-        }
-      );
+          {
+            width: "100%",
+            borderRadius: "0px",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 40%",
+              end: "top 10%",
+              scrub: 1,
+            },
+          }
+        );
+      });
+
+
     }, containerRef);
 
     return () => ctx.revert();

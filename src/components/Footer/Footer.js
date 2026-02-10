@@ -27,10 +27,10 @@ export default function Footer() {
         </h1>
         <h2 className="hero-subtitle calligraphy-font">lets Fastrack things</h2>
 
-        <button className="btn btn-light hero-cta-btn d-inline-flex align-items-center">
+        <Link href="/contact" className="btn btn-light hero-cta-btn d-inline-flex align-items-center">
           Contact Us
           <i className="bi bi-arrow-right" />
-        </button>
+        </Link>
       </section>
 
       {/* Footer area */}
@@ -77,7 +77,7 @@ export default function Footer() {
                 </a> */}
                 <a href="#" aria-label="Instagram">
                   <i className="bi bi-instagram" />
-                </a> 
+                </a>
                 <a href="#" aria-label="Facebook">
                   <i className="bi bi-facebook" />
                 </a>
@@ -89,14 +89,14 @@ export default function Footer() {
 
             <div className="col-md-6 d-flex flex-column align-items-md-end align-items-start mt-auto">
               <nav className="footer-links mb-3">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Construction</a>
-                <a href="#">Consultancy</a>
-                <a href="#">Academy</a>
-                <a href="#">Projects</a>
-                {/* <a href="#">Blog</a> */}
-                <a href="#">Contact</a>
+                <Link href="/">Home</Link>
+                <Link href="/about">About</Link>
+                <Link href="/construction">Construction</Link>
+                <Link href="/consultancy">Consultancy</Link>
+                <Link href="/academy">Academy</Link>
+                {/* <Link href="/projects">Projects</Link> */}
+                {/* <Link href="/blog">Blog</Link> */}
+                <Link href="/contact">Contact</Link>
               </nav>
 
               <nav className="footer-links small">

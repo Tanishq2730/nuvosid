@@ -151,7 +151,7 @@ export default function Construction() {
     };
 
     return (
-        <section className={styles.constructionSection}>
+        <section className="mainSection">
             <div className="container">
                 <div className={styles.sectionHeader}>
                     {/* Section header content if needed */}

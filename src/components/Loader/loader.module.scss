@@ -1,0 +1,83 @@
+.loaderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b0b0b;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loaderContent {
+    position: relative;
+    text-align: center;
+}
+
+.loaderText {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: transparent;
+    background: linear-gradient(90deg, #6cc0ff, #fff, #6cc0ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite, expand 1.5s ease-out forwards;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+.loaderBar {
+    margin-top: 20px;
+    width: 200px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0;
+}
+
+.loaderProgress {
+    width: 100%;
+    height: 100%;
+    background: #6cc0ff;
+    transform: translateX(-100%);
+    animation: load 2s ease-in-out forwards;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes expand {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        letter-spacing: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        letter-spacing: 10px;
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
