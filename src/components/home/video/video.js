@@ -118,7 +118,7 @@ export default function Video() {
               onClick={togglePlay}
               style={{ position: "absolute", top: 0, left: 0, objectFit: "cover", cursor: "pointer" }}
             >
-              <source src="/assets/homevideo.mp4" type="video/mp4" />
+              <source src="/assets/homeVideo.mov" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

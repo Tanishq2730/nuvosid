@@ -22,7 +22,7 @@ export const GoogleGeminiEffect = ({
           <>
             Think New<br />
             Think Nuvosid<br />
-            <span className="heroSubHead">A seamless partnership for all your infrastructure needs. <br/>We help you plan, build, and understand your project from the ground up.
+            <span className="heroSubHead">A seamless partnership for all your infrastructure needs. <br />We help you plan, build, and understand your project from the ground up.
 
             </span>
           </>

@@ -2525,8 +2525,26 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .aboutBg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0; */
+    background-image: url(../../public/assets/bubble.png);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    transform-origin: center center;
+    animation: rotateBg 28s linear infinite;
+    // z-index: -1;
+  }
+
   .headerSectionHome {
     padding: 0 1em;
+    color: #6dbffe;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 2.75rem;
 
     span {
       font-size: 12px;
