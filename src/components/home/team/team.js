@@ -24,11 +24,11 @@ const PrevArrow = (props) => {
         boxShadow: "0 2px 12px rgba(0,0,0,0.24)",
         width: "42px",
         height: "42px",
-        zIndex: 2,
+        zIndex: 100,
+        left: "10px",
       }}
       onClick={onClick}
     >
-      {/* Left Arrow SVG */}
       <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
         <path
           d="M13 15L8 10L13 5"
@@ -59,11 +59,11 @@ const NextArrow = (props) => {
         boxShadow: "0 2px 12px rgba(0,0,0,0.24)",
         width: "42px",
         height: "42px",
-        zIndex: 2,
+        zIndex: 100,
+        right: "10px",
       }}
       onClick={onClick}
     >
-      {/* Right Arrow SVG */}
       <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
         <path
           d="M7 5L12 10L7 15"
@@ -77,12 +77,12 @@ const NextArrow = (props) => {
   );
 };
 
-// Slider settings
-const settings = {
+// Desktop Settings
+const desktopSettings = {
   dots: true,
   infinite: true,
-  speed: 500, // Adjusted for smooth 500ms transition
-  slidesToShow: 3, // Desktop (≥ 992px)
+  speed: 500,
+  slidesToShow: 3,
   slidesToScroll: 1,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
@@ -90,24 +90,21 @@ const settings = {
   autoplaySpeed: 3000,
   cssEase: "cubic-bezier(0.4, 0, 0.2, 1)",
   arrows: true,
-  responsive: [
-    {
-      breakpoint: 992, // Tablet (768px – 991px)
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-      },
-    },
-    {
-      breakpoint: 768, // Mobile (< 768px)
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-      },
-    },
-  ],
+};
+
+// Mobile Settings
+const mobileSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  cssEase: "cubic-bezier(0.4, 0, 0.2, 1)",
+  arrows: true,
 };
 
 const Team = () => {
@@ -117,7 +114,7 @@ const Team = () => {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null; // Prevent SSR flash of desktop settings on mobile
+  if (!isMounted) return null;
 
   return (
     <section className="team">
@@ -127,26 +124,54 @@ const Team = () => {
             <div className="HeadingSection">
               <h1>Our Core Team</h1>
             </div>
-            <Slider {...settings}>
-              {teamData.map((member, idx) => (
-                <div key={idx} className={styles.slideWrap}>
-                  <div className={styles.card}>
-                    <div className={styles.imageWrap}>
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className={styles.cardImg}
-                      />
-                    </div>
-                    <div className={styles.cardBody}>
-                      <h5>{member.name}</h5>
-                      <p>{member.role}</p>
-                      <span>{member.designation}</span>
+
+            {/* Desktop Slider */}
+            <div className={styles.desktopSlider}>
+              <Slider {...desktopSettings}>
+                {teamData.map((member, idx) => (
+                  <div key={idx} className={styles.slideWrap}>
+                    <div className={styles.card}>
+                      <div className={styles.imageWrap}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className={styles.cardImg}
+                        />
+                      </div>
+                      <div className={styles.cardBody}>
+                        <h5>{member.name}</h5>
+                        <p>{member.role}</p>
+                        <span>{member.designation}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </Slider>
+                ))}
+              </Slider>
+            </div>
+
+            {/* Mobile Slider */}
+            <div className={styles.mobileSlider}>
+              <Slider {...mobileSettings}>
+                {teamData.map((member, idx) => (
+                  <div key={idx} className={styles.slideWrap}>
+                    <div className={styles.card}>
+                      <div className={styles.imageWrap}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className={styles.cardImg}
+                        />
+                      </div>
+                      <div className={styles.cardBody}>
+                        <h5>{member.name}</h5>
+                        <p>{member.role}</p>
+                        <span>{member.designation}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>

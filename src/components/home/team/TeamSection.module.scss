@@ -6,7 +6,7 @@
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
   transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  margin-top: 14em; // Reduced from 16em
+  margin-top: 14em;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -19,12 +19,12 @@
   }
 
   @media (max-width: 768px) {
-    margin-top: 7em; // Further reduced for mobile
+    margin-top: 7em;
     min-height: 240px;
   }
 
   @media (max-width: 480px) {
-    margin: 12em 10px 0; // Added side margins for mobile slides
+    margin: 12em 10px 0;
     min-height: 220px;
   }
 
@@ -103,33 +103,56 @@
 .teamSection {
   width: 100%;
   position: relative;
-  padding: 0 10px; // General padding for the section
+}
 
-  @media (max-width: 768px) {
-    padding: 0 5px;
-  }
+// Wrapper to handle the gutter for arrows
+.desktopSlider,
+.mobileSlider {
+  position: relative;
+  width: 100%;
+  padding: 0 60px;
 
-  // Target Slick's arrow containers globally within this module
   :global {
 
     .slick-prev,
     .slick-next {
-      z-index: 10;
-      width: 42px;
-      height: 42px;
+      z-index: 100;
+      top: 55%;
+      transform: translateY(-50%);
 
       &:before {
-        display: none; // Hide default slick arrows as we use custom SVGs
+        display: none;
       }
     }
 
     .slick-prev {
-      left: 0px !important; // Position inward from left
+      left: 0px !important;
     }
 
     .slick-next {
-      right: 0px !important; // Position inward from right
+      right: 0px !important;
     }
+  }
+}
+
+.desktopSlider {
+  display: block;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.mobileSlider {
+  display: none;
+  padding: 0 40px;
+
+  @media (max-width: 991px) {
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 30px;
   }
 }
 
