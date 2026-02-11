@@ -3,19 +3,22 @@
     "id": "arch",
     "title": "Construction",
     "description": "Delivering precision-engineered structures with a commitment to safety, quality, and timely execution.",
-    "imgSrc":"/assets/construction.png"
+    "imgSrc":"/assets/construction.png",
+    "link": "/construction"
   },
   {
     "id": "eng",
     "title": "Consultancy",
     "description": "Strategic expert guidance to optimize project efficiency, mitigate risks, and ensure regulatory compliance.",
-    "imgSrc":"/assets/consulting.png"
+    "imgSrc":"/assets/consulting.png",
+    "link": "/consultancy"
   },
   {
     "id": "cm",
     "title": "Academy",
     "description": "Bridging the skills gap by training the next generation of industry leaders with real-world knowledge.",
-    "imgSrc":"/assets/academy.png"
+    "imgSrc":"/assets/academy.png",
+    "link": "/academy"
   }
 ]
 

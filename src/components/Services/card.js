@@ -1,9 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./Card.module.scss";
 
-const Card = ({ heading, imgSrc, content }) => {
-  return (
-    <div className={styles.card}>
+const Card = ({ heading, imgSrc, content, link }) => {
+  const CardContent = (
+    <div className={styles.card} style={{ cursor: link ? "pointer" : "default" }}>
       <h3 className={styles.heading}>{heading}</h3>
       <div className={styles.content}>
         {content &&
@@ -20,6 +21,14 @@ const Card = ({ heading, imgSrc, content }) => {
         </div>
       )}
     </div>
+  );
+
+  return link ? (
+    <Link href={link} style={{ textDecoration: "none" }}>
+      {CardContent}
+    </Link>
+  ) : (
+    CardContent
   );
 };
 

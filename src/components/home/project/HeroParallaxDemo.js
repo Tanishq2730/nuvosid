@@ -6,7 +6,7 @@ export function HeroParallaxDemo() {
   return (
     <>
       <div className="mainSections">
-        <div className="container-fluide">
+        <div className="container-fluid">
           <HeroParallax products={products} />
         </div>
       </div>

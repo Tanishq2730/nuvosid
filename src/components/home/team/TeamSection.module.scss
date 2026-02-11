@@ -6,12 +6,12 @@
   box-shadow: 0 6px 28px rgba(0, 0, 0, 0.18);
   transition: all 0.38s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  margin-top: 16em;
+  margin-top: 14em; // Reduced from 16em
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 250px;
+  min-height: 280px;
 
   @media (max-width: 991px) {
     margin-top: 10em;
@@ -19,13 +19,13 @@
   }
 
   @media (max-width: 768px) {
-    margin-top: 15em;
-    min-height: 220px;
+    margin-top: 7em; // Further reduced for mobile
+    min-height: 240px;
   }
 
   @media (max-width: 480px) {
-    margin-top: 15em;
-    min-height: 200px;
+    margin: 12em 10px 0; // Added side margins for mobile slides
+    min-height: 220px;
   }
 
   &:hover {
@@ -40,8 +40,8 @@
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -75%);
-  width: 85%;
+  transform: translate(-50%, -65%); // Adjusted transform to align better with reduced margin
+  width: 80%;
   z-index: 5;
 }
 
@@ -56,34 +56,83 @@
 
 .cardBody {
   text-align: center;
-  padding: 2em 1.5em 1.5em;
+  padding: 1.5em 1.2em 1.2em;
   width: 100%;
 
   h5 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #fff;
     font-weight: 700;
     margin-bottom: 5px;
     letter-spacing: 0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 1.15rem;
+    }
   }
 
   p {
     color: #6cc0ff;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     margin: 0 !important;
     text-transform: uppercase;
     letter-spacing: 1px;
+
+    @media (max-width: 768px) {
+      font-size: 0.8rem;
+    }
   }
 
   span {
     display: block;
     color: rgba(255, 255, 255, 0.5);
-    font-size: 0.8rem;
-    margin-top: 12px;
-    line-height: 1.5;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    line-height: 1.4;
     font-weight: 400;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 10px;
+
+    @media (max-width: 768px) {
+      font-size: 0.7rem;
+    }
   }
+}
+
+.teamSection {
+  width: 100%;
+  position: relative;
+  padding: 0 10px; // General padding for the section
+
+  @media (max-width: 768px) {
+    padding: 0 5px;
+  }
+
+  // Target Slick's arrow containers globally within this module
+  :global {
+
+    .slick-prev,
+    .slick-next {
+      z-index: 10;
+      width: 42px;
+      height: 42px;
+
+      &:before {
+        display: none; // Hide default slick arrows as we use custom SVGs
+      }
+    }
+
+    .slick-prev {
+      left: 0px !important; // Position inward from left
+    }
+
+    .slick-next {
+      right: 0px !important; // Position inward from right
+    }
+  }
+}
+
+.slideWrap {
+  padding: 15px;
 }

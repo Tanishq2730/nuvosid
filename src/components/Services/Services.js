@@ -14,6 +14,7 @@ export default function Services() {
                   heading={service.title}
                   imgSrc={service.imgSrc}
                   content={service.description}
+                  link={service.link}
                 />
               </div>
             ))}

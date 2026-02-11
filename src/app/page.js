@@ -24,12 +24,12 @@ export default function HomePage() {
       <About />
       <ImageMarquee />
       <Counter />
-      <MapWrapper />
       <Video />
       <Team />
       <Marquee />
       <HeroParallaxDemo />
       <Testimonial />
+      <MapWrapper />
     </>
   );
 }
