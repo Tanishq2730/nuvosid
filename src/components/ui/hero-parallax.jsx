@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import Image from "next/image";
 
 export const HeroParallax = ({ products }) => {
   const firstRow = products.slice(0, 5);
@@ -59,7 +60,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[200vh] md:h-[250vh] pt-10 pb-20 md:pb-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[200vh] xxl:h-[250vh] xl:h-[300vh] lg:h-[300vh] md:h-[300vh] pt-10 pb-20 md:pb-32 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -116,6 +117,7 @@ export const Header = () => {
   );
 };
 
+
 export const ProductCard = ({ product, translate }) => {
   return (
     <motion.div
@@ -129,12 +131,13 @@ export const ProductCard = ({ product, translate }) => {
       className="group/product h-48 w-[18rem] md:h-96 md:w-[30rem] relative shrink-0"
     >
       <a href={product.link} className="block group-hover/product:shadow-2xl ">
-        <img
+        <Image
           src={product.thumbnail}
-          height="600"
-          width="600"
+          height={600}
+          width={600}
           className="object-cover object-center absolute h-full w-full inset-0 rounded-lg md:rounded-xl"
           alt={product.title}
+          quality={75}
         />
       </a>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-lg md:rounded-xl"></div>

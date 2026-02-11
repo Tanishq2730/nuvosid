@@ -25,7 +25,7 @@
 
   @media (max-width: 480px) {
     margin: 12em 10px 0;
-    min-height: 220px;
+    min-height: 250px;
   }
 
   &:hover {
@@ -110,7 +110,7 @@
 .mobileSlider {
   position: relative;
   width: 100%;
-  padding: 0 60px;
+  padding: 0 0px;
 
   :global {
 

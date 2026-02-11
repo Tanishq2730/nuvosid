@@ -4,6 +4,7 @@ import styles from "./About.module.scss";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,17 +80,28 @@ export default function About() {
             <div className="aboutContent">
               <div className="row">
                 <div className="col-md-6 col-12" ref={leftImgRef}>
-                  <div className="aboutImage" style={{ width: "100%", height: "100%" }}>
-                    <picture>
-                      <source media="(max-width: 768px)" srcSet="/assets/mobAbout1.png" />
-                      <img
+                  <div className="aboutImage" style={{ width: "100%", height: "100%", position: "relative" }}>
+                    <div className="d-none d-md-block">
+                      <Image
                         src="/assets/aboutSection1.png"
                         alt="About Us"
-                        width={500}
-                        height={500}
-                        style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                        width={600}
+                        height={600}
+                        priority
+                        className="img-fluid"
+                        style={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "20px" }}
                       />
-                    </picture>
+                    </div>
+                    <div className="d-block d-md-none">
+                      <Image
+                        src="/assets/mobAbout1.png"
+                        alt="About Us"
+                        width={400}
+                        height={400}
+                        className="img-fluid"
+                        style={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "15px" }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="middleSection">
@@ -111,17 +123,27 @@ export default function About() {
                   </div>
                 </div>
                 <div className="col-md-6 col-12" ref={rightImgRef}>
-                  <div className="aboutImage" style={{ width: "100%", height: "100%" }}>
-                    <picture>
-                      <source media="(max-width: 768px)" srcSet="/assets/mobAbout2.png" />
-                      <img
+                  <div className="aboutImage" style={{ width: "100%", height: "100%", position: "relative" }}>
+                    <div className="d-none d-md-block">
+                      <Image
                         src="/assets/aboutSection2.png"
                         alt="About Us"
-                        width={500}
-                        height={500}
-                        style={{ width: "100%", height: "auto", objectFit: "cover" }}
+                        width={600}
+                        height={600}
+                        className="img-fluid"
+                        style={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "20px" }}
                       />
-                    </picture>
+                    </div>
+                    <div className="d-block d-md-none">
+                      <Image
+                        src="/assets/mobAbout2.png"
+                        alt="About Us"
+                        width={400}
+                        height={400}
+                        className="img-fluid"
+                        style={{ width: "100%", height: "auto", objectFit: "cover", borderRadius: "15px" }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./Card.module.scss";
+import Image from "next/image";
 
 const Card = ({ heading, imgSrc, content, link }) => {
   const CardContent = (
@@ -17,7 +18,14 @@ const Card = ({ heading, imgSrc, content, link }) => {
       </div>
       {imgSrc && (
         <div className={styles.imgWrap}>
-          <img className={styles.img} src={imgSrc} alt={heading} />
+          <Image
+            className={styles.img}
+            src={imgSrc}
+            alt={heading}
+            width={500}
+            height={400}
+            style={{ objectFit: "cover" }}
+          />
         </div>
       )}
     </div>

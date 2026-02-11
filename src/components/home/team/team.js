@@ -5,6 +5,7 @@ import styles from "./TeamSection.module.scss";
 import teamData from "@/data/teamdata.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 // Custom Arrow Components
 const PrevArrow = (props) => {
@@ -107,6 +108,7 @@ const mobileSettings = {
   arrows: true,
 };
 
+
 const Team = () => {
   const [isMounted, setIsMounted] = React.useState(false);
 
@@ -132,10 +134,13 @@ const Team = () => {
                   <div key={idx} className={styles.slideWrap}>
                     <div className={styles.card}>
                       <div className={styles.imageWrap}>
-                        <img
+                        <Image
                           src={member.image}
                           alt={member.name}
+                          width={400}
+                          height={400}
                           className={styles.cardImg}
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
                       <div className={styles.cardBody}>
@@ -156,10 +161,13 @@ const Team = () => {
                   <div key={idx} className={styles.slideWrap}>
                     <div className={styles.card}>
                       <div className={styles.imageWrap}>
-                        <img
+                        <Image
                           src={member.image}
                           alt={member.name}
+                          width={400}
+                          height={400}
                           className={styles.cardImg}
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
                       <div className={styles.cardBody}>
