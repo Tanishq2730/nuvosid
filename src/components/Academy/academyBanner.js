@@ -106,7 +106,7 @@ export default function AcademyBanner() {
                                     rel="noopener noreferrer"
                                     className="academyLoginBtn"
                                 >
-                                    <span>Student Portal Login</span>
+                                    <span>Login & Signup</span>
                                     <i className="bi bi-person-fill ms-2"></i>
                                 </a>
                             </motion.div>

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AboutImg.module.scss";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,31 +24,30 @@ export default function AboutImg() {
     const ctx = gsap.context(() => {
       // Reveal animations
       gsap.from(contentRef.current, {
-        x: -100,
+        x: -50,
         opacity: 0,
-        duration: 1.5,
-        ease: "power4.out",
+        duration: 1.2,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 70%",
+          start: "top 75%",
         },
       });
 
       gsap.from(imageRef.current, {
-        x: 100,
+        x: 50,
         opacity: 0,
-        scale: 1.1,
-        duration: 1.5,
-        ease: "power4.out",
+        duration: 1.2,
+        ease: "power3.out",
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 70%",
+          start: "top 75%",
         },
       });
 
       // Parallax effect on image scroll
       gsap.to(imageRef.current.querySelector("img"), {
-        y: -50,
+        y: -30,
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top bottom",
@@ -65,8 +65,8 @@ export default function AboutImg() {
     if (!cardRef.current || window.innerWidth < 992) return;
     const { clientX, clientY } = e;
     const { left, top, width, height } = cardRef.current.getBoundingClientRect();
-    const x = (clientX - (left + width / 2)) / 25;
-    const y = (clientY - (top + height / 2)) / 25;
+    const x = (clientX - (left + width / 2)) / 30;
+    const y = (clientY - (top + height / 2)) / 30;
 
     gsap.to(cardRef.current, {
       rotateY: x,
@@ -85,14 +85,13 @@ export default function AboutImg() {
 
   return (
     <section ref={containerRef} className={styles.aboutImgSection} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-      {/* Decorative Coordinates */}
       <div className={styles.floatingElement} style={{ top: "10%", left: "5%" }}>COORD: 24.5854° N / 73.7125° E</div>
       <div className={styles.floatingElement} style={{ bottom: "15%", right: "10%" }}>STRUCT_ENG_REF: NV-2025-AWD</div>
 
       <div className="container">
-        <div className={styles.layoutGrid}>
+        <div className="row align-items-center g-4 g-lg-5">
           {/* Content Side */}
-          <div ref={contentRef} className={styles.contentSide}>
+          <div ref={contentRef} className="col-lg-6">
             <div className={styles.visionaryBox}>
               <span className={styles.label}>Our Visionary</span>
               <h2>
@@ -115,11 +114,16 @@ export default function AboutImg() {
           </div>
 
           {/* Image Side */}
-          <div ref={imageRef} className={styles.imageSide}>
+          <div ref={imageRef} className="col-lg-6">
             <div className={styles.showcaseFrame}>
-              <img
-                src="/assets/about.jpg"
+              <Image
+                src="/assets/about.png"
                 alt="Achievement Architecture"
+                width={800}
+                height={1000}
+                className="img-fluid"
+                style={{ width: "100%", height: "auto", display: "block" }}
+                priority
               />
             </div>
           </div>

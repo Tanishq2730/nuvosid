@@ -25,7 +25,7 @@ export default function Footer() {
         <h1 className="hero-title">
           Have a New Project in Mind<span className="question">?</span>
         </h1>
-        <h2 className="hero-subtitle calligraphy-font">lets Fastrack things</h2>
+        <h2 className="hero-subtitle premium-serif">lets Fastrack things</h2>
 
         <Link href="/contact" className="btn btn-light hero-cta-btn d-inline-flex align-items-center">
           Contact Us
@@ -100,15 +100,15 @@ export default function Footer() {
               </nav>
 
               <nav className="footer-links small">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms Of Services</a>
+                <Link href="/privacy-policy">Privacy Policy</Link>
+                <Link href="/terms-conditions">Terms & Condition</Link>
                 {/* <a href="#">Cookie Settings</a> */}
               </nav>
             </div>
           </div>
 
           <div className="footer-bottom text-center mt-4">
-            @2025. All Right Reserved by Nuvosid
+            @2026. All Right Reserved by Nuvosid
           </div>
         </div>
       </footer>

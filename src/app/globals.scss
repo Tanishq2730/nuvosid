@@ -1065,7 +1065,7 @@ footer {
 }
 
 /* Option 1: Google Fonts (Recommended - Free) */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&family=League+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@400;700&family=League+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap');
 
 .calligraphy-font {
   font-family: 'League Script', cursive;
@@ -1073,6 +1073,21 @@ footer {
   /* Adjust as needed */
   font-weight: 400;
   letter-spacing: 1px;
+  font-style: italic;
+}
+
+.decent-subtitle {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.premium-serif {
+  font-family: 'Playfair Display', serif;
   font-style: italic;
 }
 
